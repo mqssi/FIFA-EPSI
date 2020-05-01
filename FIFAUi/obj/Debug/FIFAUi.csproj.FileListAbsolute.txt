@@ -1,0 +1,17 @@
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\FIFAUi.exe.config
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\FIFAUi.exe
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\FIFAUi.pdb
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\FIFALib.dll
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\FIFALib.pdb
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.csprojAssemblyReference.cache
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.Accueil.resources
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.Competition.resources
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.Creation.resources
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.Properties.Resources.resources
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.csproj.GenerateResource.cache
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.csproj.CoreCompileInputs.cache
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.csproj.CopyComplete
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.exe
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.pdb
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\Dapper.dll
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\Dapper.xml

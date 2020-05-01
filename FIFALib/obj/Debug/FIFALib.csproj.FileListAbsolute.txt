@@ -1,0 +1,9 @@
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFALib\bin\Debug\FIFALib.dll
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFALib\bin\Debug\FIFALib.pdb
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFALib\obj\Debug\FIFALib.csprojAssemblyReference.cache
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFALib\obj\Debug\FIFALib.csproj.CoreCompileInputs.cache
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFALib\obj\Debug\FIFALib.dll
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFALib\obj\Debug\FIFALib.pdb
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFALib\bin\Debug\Dapper.dll
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFALib\bin\Debug\Dapper.xml
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFALib\obj\Debug\FIFALib.csproj.CopyComplete

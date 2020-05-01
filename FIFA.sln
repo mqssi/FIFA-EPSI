@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIFALib", "FIFALib\FIFALib.csproj", "{55373C5C-137C-4E3C-9A8C-73EE93E8DCB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIFAUi", "FIFAUi\FIFAUi.csproj", "{8E2BE957-F89A-434A-AB70-4FA8126FAFD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55373C5C-137C-4E3C-9A8C-73EE93E8DCB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55373C5C-137C-4E3C-9A8C-73EE93E8DCB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55373C5C-137C-4E3C-9A8C-73EE93E8DCB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55373C5C-137C-4E3C-9A8C-73EE93E8DCB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E2BE957-F89A-434A-AB70-4FA8126FAFD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E2BE957-F89A-434A-AB70-4FA8126FAFD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E2BE957-F89A-434A-AB70-4FA8126FAFD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E2BE957-F89A-434A-AB70-4FA8126FAFD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F54B4CAC-A50F-45F4-9CB4-8548C1882D03}
+	EndGlobalSection
+EndGlobal
