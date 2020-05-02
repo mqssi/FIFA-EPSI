@@ -12,5 +12,7 @@ namespace FIFALib.DataAcess
 
         Joueur CreerJoueur(Joueur model);
 
+        List<Joueur> GetALLJoueur();
+
     }
 }

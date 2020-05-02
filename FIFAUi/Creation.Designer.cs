@@ -33,7 +33,7 @@
             this.nomTournoiLabel = new System.Windows.Forms.Label();
             this.nomTournoiValue = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.joueursTournoiComboBox = new System.Windows.Forms.ComboBox();
+            this.joueursTournoiDropdown = new System.Windows.Forms.ComboBox();
             this.ajouterJoueurBox = new System.Windows.Forms.GroupBox();
             this.creationJoueurButton = new System.Windows.Forms.Button();
             this.equipeJoueurValue = new System.Windows.Forms.TextBox();
@@ -49,6 +49,7 @@
             this.creationTournoiButton = new System.Windows.Forms.Button();
             this.joueursListBox = new System.Windows.Forms.ListBox();
             this.supprimerJoueurButton = new System.Windows.Forms.Button();
+            this.ajouterJoueurTournoiButton = new System.Windows.Forms.Button();
             this.ajouterJoueurBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,13 +90,13 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Joueurs du Tournoi:";
             // 
-            // joueursTournoiComboBox
+            // joueursTournoiDropdown
             // 
-            this.joueursTournoiComboBox.FormattingEnabled = true;
-            this.joueursTournoiComboBox.Location = new System.Drawing.Point(253, 214);
-            this.joueursTournoiComboBox.Name = "joueursTournoiComboBox";
-            this.joueursTournoiComboBox.Size = new System.Drawing.Size(206, 31);
-            this.joueursTournoiComboBox.TabIndex = 5;
+            this.joueursTournoiDropdown.FormattingEnabled = true;
+            this.joueursTournoiDropdown.Location = new System.Drawing.Point(253, 214);
+            this.joueursTournoiDropdown.Name = "joueursTournoiDropdown";
+            this.joueursTournoiDropdown.Size = new System.Drawing.Size(206, 31);
+            this.joueursTournoiDropdown.TabIndex = 5;
             // 
             // ajouterJoueurBox
             // 
@@ -110,7 +111,7 @@
             this.ajouterJoueurBox.Controls.Add(this.label2);
             this.ajouterJoueurBox.Controls.Add(this.pseudoJoueurValue);
             this.ajouterJoueurBox.Controls.Add(this.pseudoJoueurLabel);
-            this.ajouterJoueurBox.Location = new System.Drawing.Point(62, 279);
+            this.ajouterJoueurBox.Location = new System.Drawing.Point(74, 345);
             this.ajouterJoueurBox.Name = "ajouterJoueurBox";
             this.ajouterJoueurBox.Size = new System.Drawing.Size(385, 404);
             this.ajouterJoueurBox.TabIndex = 6;
@@ -255,17 +256,33 @@
             this.supprimerJoueurButton.Text = "Supprimer Joueur";
             this.supprimerJoueurButton.UseVisualStyleBackColor = true;
             // 
+            // ajouterJoueurTournoiButton
+            // 
+            this.ajouterJoueurTournoiButton.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.ajouterJoueurTournoiButton.FlatAppearance.BorderSize = 2;
+            this.ajouterJoueurTournoiButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.ajouterJoueurTournoiButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.ajouterJoueurTournoiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ajouterJoueurTournoiButton.Location = new System.Drawing.Point(156, 266);
+            this.ajouterJoueurTournoiButton.Name = "ajouterJoueurTournoiButton";
+            this.ajouterJoueurTournoiButton.Size = new System.Drawing.Size(212, 51);
+            this.ajouterJoueurTournoiButton.TabIndex = 11;
+            this.ajouterJoueurTournoiButton.Text = "Ajouter au tournoi";
+            this.ajouterJoueurTournoiButton.UseVisualStyleBackColor = true;
+            this.ajouterJoueurTournoiButton.Click += new System.EventHandler(this.ajouterJoueurTournoiButton_Click);
+            // 
             // Creation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1123, 862);
+            this.Controls.Add(this.ajouterJoueurTournoiButton);
             this.Controls.Add(this.supprimerJoueurButton);
             this.Controls.Add(this.joueursListBox);
             this.Controls.Add(this.creationTournoiButton);
             this.Controls.Add(this.ajouterJoueurBox);
-            this.Controls.Add(this.joueursTournoiComboBox);
+            this.Controls.Add(this.joueursTournoiDropdown);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nomTournoiValue);
             this.Controls.Add(this.nomTournoiLabel);
@@ -289,7 +306,7 @@
         private System.Windows.Forms.Label nomTournoiLabel;
         private System.Windows.Forms.TextBox nomTournoiValue;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox joueursTournoiComboBox;
+        private System.Windows.Forms.ComboBox joueursTournoiDropdown;
         private System.Windows.Forms.GroupBox ajouterJoueurBox;
         private System.Windows.Forms.Label pseudoJoueurLabel;
         private System.Windows.Forms.TextBox prenomJoueurValue;
@@ -305,5 +322,6 @@
         private System.Windows.Forms.ListBox joueursListBox;
         private System.Windows.Forms.Button supprimerJoueurButton;
         private System.Windows.Forms.TextBox pseudoJoueurValue;
+        private System.Windows.Forms.Button ajouterJoueurTournoiButton;
     }
 }

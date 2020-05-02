@@ -24,17 +24,17 @@ namespace FIFALib.Models
         /// <summary>
         /// Représente le pseudo d'un joueur
         /// </summary>
-        public string PseudoJoueur { get; set; }
+        public string Pseudo_Joueur { get; set; }
 
-        public string NomJoueur { get; set; }
+        public string Nom_Joueur { get; set; }
 
-        public string PrenomJoueur { get; set; }
+        public string Prenom_Joueur { get; set; }
 
-        public string MailJoueur { get; set; }
+        public string Mail_Joueur { get; set; }
 
 
 
-        public string EquipeJoueur { get; set; }
+        public string Equipe_Joueur { get; set; }
 
 
 
@@ -48,11 +48,11 @@ namespace FIFALib.Models
         public Joueur(string pseudoJoueur, string nomJoueur, string prenomJoueur, string mailJoueur, string equipeJoueur)
         {
 
-            PseudoJoueur = pseudoJoueur;
-            NomJoueur = nomJoueur;
-            PrenomJoueur = prenomJoueur;
-            MailJoueur = mailJoueur;
-            EquipeJoueur = equipeJoueur;
+            Pseudo_Joueur = pseudoJoueur;
+            Nom_Joueur = nomJoueur;
+            Prenom_Joueur = prenomJoueur;
+            Mail_Joueur = mailJoueur;
+            Equipe_Joueur = equipeJoueur;
 
 
 

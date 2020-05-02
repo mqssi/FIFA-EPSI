@@ -15,5 +15,10 @@ namespace FIFALib.DataAcess
 
             return model;
         }
+
+        public List<Joueur> GetALLJoueur()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -15,22 +15,49 @@ namespace FIFAUi
 {
     public partial class Creation : Form
     {
+
+
+        private List<Joueur> JoueursDispo = GlobalConfig.Connection.GetALLJoueur();
+        private List<Joueur> JoueursSelect = new List<Joueur>();
+
+
         public Creation()
         {
             InitializeComponent();
+            // CreerDataExemple();
+            LienListe();
         }
 
 
 
+        private void CreerDataExemple()
+        {
+
+            JoueursDispo.Add(new Joueur { Pseudo_Joueur = "av3k" });
+            JoueursDispo.Add(new Joueur { Pseudo_Joueur = "fatal1ty" });
+            JoueursDispo.Add(new Joueur { Pseudo_Joueur = "rapha" });
+
+
+            JoueursSelect.Add(new Joueur { Pseudo_Joueur = "COOLLER" });
+            JoueursSelect.Add(new Joueur { Pseudo_Joueur = "cYphEr" });
+
+
+        }
 
 
 
+        private void LienListe()
+        {
 
+            joueursTournoiDropdown.DataSource = null;
+            joueursTournoiDropdown.DataSource = JoueursDispo;
+            joueursTournoiDropdown.DisplayMember = "Pseudo_Joueur";
 
+            joueursListBox.DataSource = null;
+            joueursListBox.DataSource = JoueursSelect;
+            joueursListBox.DisplayMember = "Pseudo_Joueur";
 
-
-
-
+        }
 
 
 
@@ -115,6 +142,17 @@ namespace FIFAUi
 
             return output;
 
+        }
+
+        private void ajouterJoueurTournoiButton_Click(object sender, EventArgs e)
+        {
+
+            Joueur j = (Joueur)joueursTournoiDropdown.SelectedItem;
+
+            JoueursDispo.Remove(j);
+            JoueursSelect.Add(j);
+
+            LienListe();
         }
     }
 }

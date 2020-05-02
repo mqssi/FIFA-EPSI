@@ -14,7 +14,7 @@ namespace FIFALib.DataAcess
 {
     public class SqlConnector : IDataConnection
     {
-
+        private const string db = "FIFA";
         /// <summary>
         /// Sauvegarde un joueur dans la base de données
         /// </summary>
@@ -23,18 +23,18 @@ namespace FIFALib.DataAcess
         public Joueur CreerJoueur(Joueur model)
         {
 
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("FIFA")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
 
 
 
                 var j = new DynamicParameters();
 
-                j.Add("@Pseudo_Joueur", model.PseudoJoueur);
-                j.Add("@Nom_Joueur", model.NomJoueur);
-                j.Add("@Prenom_Joueur", model.PrenomJoueur);
-                j.Add("@Mail_Joueur", model.MailJoueur);
-                j.Add("Equipe_Joueur", model.EquipeJoueur);
+                j.Add("@Pseudo_Joueur", model.Pseudo_Joueur);
+                j.Add("@Nom_Joueur", model.Nom_Joueur);
+                j.Add("@Prenom_Joueur", model.Prenom_Joueur);
+                j.Add("@Mail_Joueur", model.Mail_Joueur);
+                j.Add("Equipe_Joueur", model.Equipe_Joueur);
                 j.Add("@ID_Joueur", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
 
@@ -52,6 +52,19 @@ namespace FIFALib.DataAcess
 
         }
 
+        public List<Joueur> GetALLJoueur()
+        {
 
+            List<Joueur> output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db))) 
+            {
+                output = connection.Query<Joueur>("dbo.Joueur_GetALL").ToList();
+
+            }
+
+            return output;
+
+        }
     }
 }
