@@ -27,14 +27,14 @@ namespace FIFALib
            
             }
 
-            else if (db == DatabaseType.TextFile)
+          /* else if (db == DatabaseType.TextFile)
             {
 
 
                 TextConnector text = new TextConnector();
                 Connection = text;
 
-            }
+            }*/
 
         }
 

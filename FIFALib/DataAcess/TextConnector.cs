@@ -9,6 +9,11 @@ namespace FIFALib.DataAcess
 {
     public class TextConnector : IDataConnection
     {
+        public Equipe CreerEquipe(Equipe model)
+        {
+            throw new NotImplementedException();
+        }
+
         public Joueur CreerJoueur(Joueur model)
         {
             model.Id = 1;
@@ -17,6 +22,16 @@ namespace FIFALib.DataAcess
         }
 
         public List<Joueur> GetALLJoueur()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Equipe> GetTeam_ALl()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Equipe> GetTeam_ALL()
         {
             throw new NotImplementedException();
         }

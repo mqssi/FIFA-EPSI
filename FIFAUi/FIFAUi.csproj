@@ -64,8 +64,21 @@
     <Compile Include="Creation.Designer.cs">
       <DependentUpon>Creation.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreationTournoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreationTournoi.Designer.cs">
+      <DependentUpon>CreationTournoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IEquipeRequester.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TournoiViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TournoiViewer.Designer.cs">
+      <DependentUpon>TournoiViewer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Creation.resx">
       <DependentUpon>Creation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreationTournoi.resx">
+      <DependentUpon>CreationTournoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,6 +101,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TournoiViewer.resx">
+      <DependentUpon>TournoiViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

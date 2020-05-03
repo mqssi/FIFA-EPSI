@@ -8,8 +8,7 @@ namespace FIFALib
 {
     public enum DatabaseType
     {
-        Sql,
-        TextFile
+        Sql
 
 
     }

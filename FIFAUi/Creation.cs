@@ -19,12 +19,14 @@ namespace FIFAUi
 
         private List<Joueur> JoueursDispo = GlobalConfig.Connection.GetALLJoueur();
         private List<Joueur> JoueursSelect = new List<Joueur>();
+        private IEquipeRequester CallingForm;
 
-
-        public Creation()
+        public Creation(IEquipeRequester caller)
         {
             InitializeComponent();
+            CallingForm = caller;
             // CreerDataExemple();
+            
             LienListe();
         }
 
@@ -69,15 +71,17 @@ namespace FIFAUi
             if (ValiderForm())
             {
 
-                Joueur model = new Joueur(
+                Joueur j = new Joueur(
                     pseudoJoueurValue.Text, 
                     nomJoueurValue.Text, 
                     prenomJoueurValue.Text, 
-                    mailJoueurValue.Text, 
+                    mailJoueurValue.Text,
                     equipeJoueurValue.Text);
             
-                  GlobalConfig.Connection.CreerJoueur(model);
-                
+                  GlobalConfig.Connection.CreerJoueur(j);
+                JoueursSelect.Add(j);
+
+                LienListe();
 
                 pseudoJoueurValue.Text = "";
                 nomJoueurValue.Text = "";
@@ -148,11 +152,50 @@ namespace FIFAUi
         {
 
             Joueur j = (Joueur)joueursTournoiDropdown.SelectedItem;
+            
+            
+            if (j != null)
+            {
+                JoueursDispo.Remove(j);
+                JoueursSelect.Add(j);
 
-            JoueursDispo.Remove(j);
-            JoueursSelect.Add(j);
+                LienListe();
+            }
+        }
 
-            LienListe();
+        private void retirerJoueurButton_Click(object sender, EventArgs e)
+        {
+
+            Joueur j = (Joueur)joueursListBox.SelectedItem;
+
+
+
+            if (j != null)
+            {
+
+                JoueursSelect.Remove(j);
+                JoueursDispo.Add(j);
+
+                LienListe();
+            }
+            else if(j == null)
+            {
+
+                MessageBox.Show("Il faut selectionner un joueur");
+
+            }
+        }
+
+        private void creationEquipeButton_Click(object sender, EventArgs e)
+        {
+            Equipe t = new Equipe();
+            t.Nom_Equipe = nomEquipeValue.Text;
+            t.MembreEquipe = JoueursSelect;
+            GlobalConfig.Connection.CreerEquipe(t);
+            CallingForm.EquipeComplete(t);
+            this.Close();
+
+
         }
     }
 }

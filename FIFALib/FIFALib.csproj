@@ -51,6 +51,7 @@
     <Compile Include="Models\Competition.cs" />
     <Compile Include="GlobalConfig.cs" />
     <Compile Include="DataAcess\IDataConnection.cs" />
+    <Compile Include="Models\Equipe.cs" />
     <Compile Include="Models\Joueur.cs" />
     <Compile Include="Models\Match.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

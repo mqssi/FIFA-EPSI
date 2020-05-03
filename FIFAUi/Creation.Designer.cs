@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Creation));
             this.creationLabel = new System.Windows.Forms.Label();
-            this.nomTournoiLabel = new System.Windows.Forms.Label();
-            this.nomTournoiValue = new System.Windows.Forms.TextBox();
+            this.nomEquipeLabel = new System.Windows.Forms.Label();
+            this.nomEquipeValue = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.joueursTournoiDropdown = new System.Windows.Forms.ComboBox();
             this.ajouterJoueurBox = new System.Windows.Forms.GroupBox();
-            this.creationJoueurButton = new System.Windows.Forms.Button();
             this.equipeJoueurValue = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.creationJoueurButton = new System.Windows.Forms.Button();
             this.mailJoueurValue = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.prenomJoueurValue = new System.Windows.Forms.TextBox();
@@ -46,10 +46,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pseudoJoueurValue = new System.Windows.Forms.TextBox();
             this.pseudoJoueurLabel = new System.Windows.Forms.Label();
-            this.creationTournoiButton = new System.Windows.Forms.Button();
+            this.creationEquipeButton = new System.Windows.Forms.Button();
             this.joueursListBox = new System.Windows.Forms.ListBox();
-            this.supprimerJoueurButton = new System.Windows.Forms.Button();
-            this.ajouterJoueurTournoiButton = new System.Windows.Forms.Button();
+            this.retirerJoueurButton = new System.Windows.Forms.Button();
+            this.ajouterJoueurEquipeiButton = new System.Windows.Forms.Button();
+            this.joueursEquipeLabel = new System.Windows.Forms.Label();
             this.ajouterJoueurBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,32 +60,32 @@
             this.creationLabel.Font = new System.Drawing.Font("Montserrat Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creationLabel.Location = new System.Drawing.Point(431, 41);
             this.creationLabel.Name = "creationLabel";
-            this.creationLabel.Size = new System.Drawing.Size(278, 38);
+            this.creationLabel.Size = new System.Drawing.Size(273, 38);
             this.creationLabel.TabIndex = 1;
-            this.creationLabel.Text = "Création Tournoi";
+            this.creationLabel.Text = "Création Equipe";
             // 
-            // nomTournoiLabel
+            // nomEquipeLabel
             // 
-            this.nomTournoiLabel.AutoSize = true;
-            this.nomTournoiLabel.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomTournoiLabel.Location = new System.Drawing.Point(41, 139);
-            this.nomTournoiLabel.Name = "nomTournoiLabel";
-            this.nomTournoiLabel.Size = new System.Drawing.Size(185, 25);
-            this.nomTournoiLabel.TabIndex = 2;
-            this.nomTournoiLabel.Text = "Nom du Tournoi:";
+            this.nomEquipeLabel.AutoSize = true;
+            this.nomEquipeLabel.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomEquipeLabel.Location = new System.Drawing.Point(42, 213);
+            this.nomEquipeLabel.Name = "nomEquipeLabel";
+            this.nomEquipeLabel.Size = new System.Drawing.Size(182, 25);
+            this.nomEquipeLabel.TabIndex = 2;
+            this.nomEquipeLabel.Text = "Nom de l\'équipe";
             // 
-            // nomTournoiValue
+            // nomEquipeValue
             // 
-            this.nomTournoiValue.Location = new System.Drawing.Point(253, 139);
-            this.nomTournoiValue.Name = "nomTournoiValue";
-            this.nomTournoiValue.Size = new System.Drawing.Size(206, 30);
-            this.nomTournoiValue.TabIndex = 3;
+            this.nomEquipeValue.Location = new System.Drawing.Point(254, 213);
+            this.nomEquipeValue.Name = "nomEquipeValue";
+            this.nomEquipeValue.Size = new System.Drawing.Size(206, 30);
+            this.nomEquipeValue.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 215);
+            this.label1.Location = new System.Drawing.Point(13, 289);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(214, 25);
             this.label1.TabIndex = 4;
@@ -93,16 +94,16 @@
             // joueursTournoiDropdown
             // 
             this.joueursTournoiDropdown.FormattingEnabled = true;
-            this.joueursTournoiDropdown.Location = new System.Drawing.Point(253, 214);
+            this.joueursTournoiDropdown.Location = new System.Drawing.Point(254, 288);
             this.joueursTournoiDropdown.Name = "joueursTournoiDropdown";
             this.joueursTournoiDropdown.Size = new System.Drawing.Size(206, 31);
             this.joueursTournoiDropdown.TabIndex = 5;
             // 
             // ajouterJoueurBox
             // 
-            this.ajouterJoueurBox.Controls.Add(this.creationJoueurButton);
             this.ajouterJoueurBox.Controls.Add(this.equipeJoueurValue);
             this.ajouterJoueurBox.Controls.Add(this.label5);
+            this.ajouterJoueurBox.Controls.Add(this.creationJoueurButton);
             this.ajouterJoueurBox.Controls.Add(this.mailJoueurValue);
             this.ajouterJoueurBox.Controls.Add(this.label4);
             this.ajouterJoueurBox.Controls.Add(this.prenomJoueurValue);
@@ -111,31 +112,16 @@
             this.ajouterJoueurBox.Controls.Add(this.label2);
             this.ajouterJoueurBox.Controls.Add(this.pseudoJoueurValue);
             this.ajouterJoueurBox.Controls.Add(this.pseudoJoueurLabel);
-            this.ajouterJoueurBox.Location = new System.Drawing.Point(74, 345);
+            this.ajouterJoueurBox.Location = new System.Drawing.Point(75, 419);
             this.ajouterJoueurBox.Name = "ajouterJoueurBox";
-            this.ajouterJoueurBox.Size = new System.Drawing.Size(385, 404);
+            this.ajouterJoueurBox.Size = new System.Drawing.Size(385, 364);
             this.ajouterJoueurBox.TabIndex = 6;
             this.ajouterJoueurBox.TabStop = false;
             this.ajouterJoueurBox.Text = "Ajouter un joueur:";
             // 
-            // creationJoueurButton
-            // 
-            this.creationJoueurButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.creationJoueurButton.FlatAppearance.BorderSize = 2;
-            this.creationJoueurButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.creationJoueurButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.creationJoueurButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.creationJoueurButton.Location = new System.Drawing.Point(110, 337);
-            this.creationJoueurButton.Name = "creationJoueurButton";
-            this.creationJoueurButton.Size = new System.Drawing.Size(169, 42);
-            this.creationJoueurButton.TabIndex = 7;
-            this.creationJoueurButton.Text = "Créer Joueur";
-            this.creationJoueurButton.UseVisualStyleBackColor = true;
-            this.creationJoueurButton.Click += new System.EventHandler(this.creationJoueurButton_Click);
-            // 
             // equipeJoueurValue
             // 
-            this.equipeJoueurValue.Location = new System.Drawing.Point(179, 261);
+            this.equipeJoueurValue.Location = new System.Drawing.Point(179, 252);
             this.equipeJoueurValue.Name = "equipeJoueurValue";
             this.equipeJoueurValue.Size = new System.Drawing.Size(171, 30);
             this.equipeJoueurValue.TabIndex = 12;
@@ -144,11 +130,26 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(42, 264);
+            this.label5.Location = new System.Drawing.Point(42, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 23);
             this.label5.TabIndex = 11;
             this.label5.Text = "Equipe:";
+            // 
+            // creationJoueurButton
+            // 
+            this.creationJoueurButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.creationJoueurButton.FlatAppearance.BorderSize = 2;
+            this.creationJoueurButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.creationJoueurButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.creationJoueurButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.creationJoueurButton.Location = new System.Drawing.Point(110, 296);
+            this.creationJoueurButton.Name = "creationJoueurButton";
+            this.creationJoueurButton.Size = new System.Drawing.Size(169, 42);
+            this.creationJoueurButton.TabIndex = 7;
+            this.creationJoueurButton.Text = "Créer Joueur";
+            this.creationJoueurButton.UseVisualStyleBackColor = true;
+            this.creationJoueurButton.Click += new System.EventHandler(this.creationJoueurButton_Click);
             // 
             // mailJoueurValue
             // 
@@ -218,80 +219,95 @@
             this.pseudoJoueurLabel.TabIndex = 3;
             this.pseudoJoueurLabel.Text = "Pseudo:";
             // 
-            // creationTournoiButton
+            // creationEquipeButton
             // 
-            this.creationTournoiButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.creationTournoiButton.FlatAppearance.BorderSize = 2;
-            this.creationTournoiButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.creationTournoiButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.creationTournoiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.creationTournoiButton.Location = new System.Drawing.Point(407, 734);
-            this.creationTournoiButton.Name = "creationTournoiButton";
-            this.creationTournoiButton.Size = new System.Drawing.Size(247, 78);
-            this.creationTournoiButton.TabIndex = 8;
-            this.creationTournoiButton.Text = "Créer le Tournoi";
-            this.creationTournoiButton.UseVisualStyleBackColor = true;
+            this.creationEquipeButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.creationEquipeButton.FlatAppearance.BorderSize = 2;
+            this.creationEquipeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.creationEquipeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.creationEquipeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.creationEquipeButton.Location = new System.Drawing.Point(504, 877);
+            this.creationEquipeButton.Name = "creationEquipeButton";
+            this.creationEquipeButton.Size = new System.Drawing.Size(247, 78);
+            this.creationEquipeButton.TabIndex = 8;
+            this.creationEquipeButton.Text = "Créer l\'équipe";
+            this.creationEquipeButton.UseVisualStyleBackColor = true;
+            this.creationEquipeButton.Click += new System.EventHandler(this.creationEquipeButton_Click);
             // 
             // joueursListBox
             // 
             this.joueursListBox.FormattingEnabled = true;
             this.joueursListBox.ItemHeight = 23;
-            this.joueursListBox.Location = new System.Drawing.Point(556, 127);
+            this.joueursListBox.Location = new System.Drawing.Point(626, 201);
             this.joueursListBox.Name = "joueursListBox";
             this.joueursListBox.Size = new System.Drawing.Size(309, 556);
             this.joueursListBox.TabIndex = 9;
             // 
-            // supprimerJoueurButton
+            // retirerJoueurButton
             // 
-            this.supprimerJoueurButton.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.supprimerJoueurButton.FlatAppearance.BorderSize = 2;
-            this.supprimerJoueurButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.supprimerJoueurButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.supprimerJoueurButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.supprimerJoueurButton.ForeColor = System.Drawing.Color.Red;
-            this.supprimerJoueurButton.Location = new System.Drawing.Point(907, 306);
-            this.supprimerJoueurButton.Name = "supprimerJoueurButton";
-            this.supprimerJoueurButton.Size = new System.Drawing.Size(158, 62);
-            this.supprimerJoueurButton.TabIndex = 10;
-            this.supprimerJoueurButton.Text = "Supprimer Joueur";
-            this.supprimerJoueurButton.UseVisualStyleBackColor = true;
+            this.retirerJoueurButton.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.retirerJoueurButton.FlatAppearance.BorderSize = 2;
+            this.retirerJoueurButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.retirerJoueurButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.retirerJoueurButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.retirerJoueurButton.ForeColor = System.Drawing.Color.Red;
+            this.retirerJoueurButton.Location = new System.Drawing.Point(977, 380);
+            this.retirerJoueurButton.Name = "retirerJoueurButton";
+            this.retirerJoueurButton.Size = new System.Drawing.Size(158, 62);
+            this.retirerJoueurButton.TabIndex = 10;
+            this.retirerJoueurButton.Text = "Retirer Joueur";
+            this.retirerJoueurButton.UseVisualStyleBackColor = true;
+            this.retirerJoueurButton.Click += new System.EventHandler(this.retirerJoueurButton_Click);
             // 
-            // ajouterJoueurTournoiButton
+            // ajouterJoueurEquipeiButton
             // 
-            this.ajouterJoueurTournoiButton.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.ajouterJoueurTournoiButton.FlatAppearance.BorderSize = 2;
-            this.ajouterJoueurTournoiButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.ajouterJoueurTournoiButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.ajouterJoueurTournoiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ajouterJoueurTournoiButton.Location = new System.Drawing.Point(156, 266);
-            this.ajouterJoueurTournoiButton.Name = "ajouterJoueurTournoiButton";
-            this.ajouterJoueurTournoiButton.Size = new System.Drawing.Size(212, 51);
-            this.ajouterJoueurTournoiButton.TabIndex = 11;
-            this.ajouterJoueurTournoiButton.Text = "Ajouter au tournoi";
-            this.ajouterJoueurTournoiButton.UseVisualStyleBackColor = true;
-            this.ajouterJoueurTournoiButton.Click += new System.EventHandler(this.ajouterJoueurTournoiButton_Click);
+            this.ajouterJoueurEquipeiButton.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.ajouterJoueurEquipeiButton.FlatAppearance.BorderSize = 2;
+            this.ajouterJoueurEquipeiButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.ajouterJoueurEquipeiButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.ajouterJoueurEquipeiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ajouterJoueurEquipeiButton.Location = new System.Drawing.Point(157, 340);
+            this.ajouterJoueurEquipeiButton.Name = "ajouterJoueurEquipeiButton";
+            this.ajouterJoueurEquipeiButton.Size = new System.Drawing.Size(212, 51);
+            this.ajouterJoueurEquipeiButton.TabIndex = 11;
+            this.ajouterJoueurEquipeiButton.Text = "Ajouter à l\'équipe";
+            this.ajouterJoueurEquipeiButton.UseVisualStyleBackColor = true;
+            this.ajouterJoueurEquipeiButton.Click += new System.EventHandler(this.ajouterJoueurTournoiButton_Click);
+            // 
+            // joueursEquipeLabel
+            // 
+            this.joueursEquipeLabel.AutoSize = true;
+            this.joueursEquipeLabel.Font = new System.Drawing.Font("Montserrat Light", 16F);
+            this.joueursEquipeLabel.Location = new System.Drawing.Point(673, 160);
+            this.joueursEquipeLabel.Name = "joueursEquipeLabel";
+            this.joueursEquipeLabel.Size = new System.Drawing.Size(222, 26);
+            this.joueursEquipeLabel.TabIndex = 12;
+            this.joueursEquipeLabel.Text = "Joueurs de l\'équipe";
             // 
             // Creation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1123, 862);
-            this.Controls.Add(this.ajouterJoueurTournoiButton);
-            this.Controls.Add(this.supprimerJoueurButton);
+            this.ClientSize = new System.Drawing.Size(1200, 995);
+            this.Controls.Add(this.joueursEquipeLabel);
+            this.Controls.Add(this.ajouterJoueurEquipeiButton);
+            this.Controls.Add(this.retirerJoueurButton);
             this.Controls.Add(this.joueursListBox);
-            this.Controls.Add(this.creationTournoiButton);
+            this.Controls.Add(this.creationEquipeButton);
             this.Controls.Add(this.ajouterJoueurBox);
             this.Controls.Add(this.joueursTournoiDropdown);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.nomTournoiValue);
-            this.Controls.Add(this.nomTournoiLabel);
+            this.Controls.Add(this.nomEquipeValue);
+            this.Controls.Add(this.nomEquipeLabel);
             this.Controls.Add(this.creationLabel);
             this.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Creation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creation";
             this.ajouterJoueurBox.ResumeLayout(false);
             this.ajouterJoueurBox.PerformLayout();
@@ -303,8 +319,8 @@
         #endregion
 
         private System.Windows.Forms.Label creationLabel;
-        private System.Windows.Forms.Label nomTournoiLabel;
-        private System.Windows.Forms.TextBox nomTournoiValue;
+        private System.Windows.Forms.Label nomEquipeLabel;
+        private System.Windows.Forms.TextBox nomEquipeValue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox joueursTournoiDropdown;
         private System.Windows.Forms.GroupBox ajouterJoueurBox;
@@ -313,15 +329,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox nomJoueurValue;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox equipeJoueurValue;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox mailJoueurValue;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button creationJoueurButton;
-        private System.Windows.Forms.Button creationTournoiButton;
+        private System.Windows.Forms.Button creationEquipeButton;
         private System.Windows.Forms.ListBox joueursListBox;
-        private System.Windows.Forms.Button supprimerJoueurButton;
+        private System.Windows.Forms.Button retirerJoueurButton;
         private System.Windows.Forms.TextBox pseudoJoueurValue;
-        private System.Windows.Forms.Button ajouterJoueurTournoiButton;
+        private System.Windows.Forms.Button ajouterJoueurEquipeiButton;
+        private System.Windows.Forms.Label joueursEquipeLabel;
+        private System.Windows.Forms.TextBox equipeJoueurValue;
+        private System.Windows.Forms.Label label5;
     }
 }

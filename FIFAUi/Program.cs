@@ -23,7 +23,7 @@ namespace FIFAUi
             //Initialiser bdd
 
             GlobalConfig.InitializeConnections(DatabaseType.Sql);
-             Application.Run(new Creation());
+             Application.Run(new CreationTournoi());
             //Application.Run(new Accueil());
         }
     }

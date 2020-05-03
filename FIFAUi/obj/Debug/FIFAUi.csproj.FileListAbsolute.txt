@@ -15,3 +15,5 @@ C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.exe
 C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.pdb
 C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\Dapper.dll
 C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\Dapper.xml
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.CreationTournoi.resources
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.TournoiViewer.resources

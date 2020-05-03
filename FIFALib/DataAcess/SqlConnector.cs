@@ -15,6 +15,53 @@ namespace FIFALib.DataAcess
     public class SqlConnector : IDataConnection
     {
         private const string db = "FIFA";
+
+        public Equipe CreerEquipe(Equipe model)
+        {
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+
+
+
+                var j = new DynamicParameters();
+
+                j.Add("@Nom_Equipe", model.Nom_Equipe);
+                j.Add("@ID_Equipe", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+
+                connection.Execute("dbo.spEquipes_Insert", j, commandType: CommandType.StoredProcedure);
+
+                model.Id = j.Get<int>("@ID_Equipe");
+
+
+                foreach(Joueur je in model.MembreEquipe )
+                {
+                    j =  new DynamicParameters();
+                    j.Add("@ID_Equipe", model.Id);
+                    j.Add("@ID_Joueur", je.Id);
+
+
+                    connection.Execute("dbo.spMembreEquipe_Insert", j, commandType: CommandType.StoredProcedure);
+
+                }
+
+                return model;
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+
         /// <summary>
         /// Sauvegarde un joueur dans la base de données
         /// </summary>
@@ -65,6 +112,33 @@ namespace FIFALib.DataAcess
 
             return output;
 
+        }
+
+        public List<Equipe> GetTeam_ALL()
+        {
+
+
+            List<Equipe> output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                output = connection.Query<Equipe>("dbo.spEquipe_GetALL").ToList();
+
+
+                foreach( Equipe equipe in output)
+                {
+                    var j = new DynamicParameters();
+
+                    j.Add("@ID_Equipe", equipe.Id);
+
+                    equipe.MembreEquipe = connection.Query<Joueur>("dbo.spME_GetParEquipe", j, commandType: CommandType.StoredProcedure).ToList();
+                }
+            }
+
+            return output;
+
+
+            
         }
     }
 }

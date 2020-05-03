@@ -32,9 +32,8 @@ namespace FIFALib.Models
 
         public string Mail_Joueur { get; set; }
 
-
-
         public string Equipe_Joueur { get; set; }
+
 
 
 
@@ -53,7 +52,6 @@ namespace FIFALib.Models
             Prenom_Joueur = prenomJoueur;
             Mail_Joueur = mailJoueur;
             Equipe_Joueur = equipeJoueur;
-
 
 
         }
