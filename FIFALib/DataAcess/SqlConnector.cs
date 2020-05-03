@@ -16,6 +16,106 @@ namespace FIFALib.DataAcess
     {
         private const string db = "FIFA";
 
+        public void CreerCompet(Competition comp)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                SaveComp(connection, comp);
+                SaveCompEquipes(connection, comp);
+
+                SaveCompRounds(connection, comp);
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+        private void SaveComp(IDbConnection connection, Competition comp)
+        {
+
+            var c = new DynamicParameters();
+
+            c.Add("@Comp_Nom", comp.NomCompetition);
+            c.Add("@ID_Comp", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+
+            connection.Execute("dbo.spComp_Insert", c, commandType: CommandType.StoredProcedure);
+
+            comp.Id = c.Get<int>("@ID_Comp");
+
+
+        }
+
+
+        private void SaveCompEquipes(IDbConnection connection, Competition comp)
+        {
+            foreach (Equipe ei in comp.EquipeInscrites)
+            {
+               var c = new DynamicParameters();
+                c.Add("@ID_Competition", comp.Id);
+                c.Add("@ID_Equipe", ei.Id);
+                c.Add("@ID_CompetitionEnt", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+
+                connection.Execute("dbo.spCompEntry_Insert", c, commandType: CommandType.StoredProcedure);
+
+            }
+
+
+
+        }
+
+
+        private void SaveCompRounds(IDbConnection connection, Competition comp)
+        {
+            foreach (List<Match> round in comp.Rounds)
+            {
+
+                foreach (Match match in round)
+                {
+                    var c = new DynamicParameters();
+                    c.Add("@ID_Comp", comp.Id);
+                    c.Add("@Match_Round", match.RoundMatch);
+                    c.Add("@ID_Match", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+
+                    connection.Execute("dbo.Match_Insert", c, commandType: CommandType.StoredProcedure);
+
+                    match.Id = c.Get<int>("@ID_Match");
+
+
+                    foreach (MatchEntry entry in match.Entries)
+                    {
+
+                         c = new DynamicParameters();
+
+                        c.Add("@ID_Match", match.Id);
+                        c.Add("@ID_MatchParent", entry.MatchParent);
+                        c.Add("@ID_EquipeJouant", entry.EquipeJouant.Id);
+                        c.Add("@ID_MatchEntry", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+
+                        connection.Execute("dbo.MatchEntry_Insert", c, commandType: CommandType.StoredProcedure);
+
+                        entry.Id = c.Get<int>("@ID_MatchEntry");
+
+
+
+                    }
+                }
+
+
+            }
+
+
+        }
+
         public Equipe CreerEquipe(Equipe model)
         {
 

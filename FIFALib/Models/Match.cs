@@ -11,6 +11,10 @@ namespace FIFALib.Models
     /// </summary>
     public class Match
     {
+
+
+
+        public int Id { get; set; }
         /// <summary>
         /// Repérsente la date où le match a commencé
         /// </summary>
@@ -24,12 +28,16 @@ namespace FIFALib.Models
         /// <summary>
         /// Repérsente le gagnant d'un match
         /// </summary>
-        public Joueur WinnerMatch { get; set; }
+        public Equipe Winner{ get; set; }
 
         /// <summary>
         /// Repérsente le Round du Tournoi
         /// </summary>
         public int RoundMatch { get; set; }
+
+
+
+        public List<MatchEntry> Entries { get; set; } = new List<MatchEntry>();
 
         /// <summary>
         /// Repérsente le Score du 1er joueur
@@ -47,6 +55,8 @@ namespace FIFALib.Models
         /// </summary>
 
         public int NombreBut { get; set; }
+
+      
 
 
     }

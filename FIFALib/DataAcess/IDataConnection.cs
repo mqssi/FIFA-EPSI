@@ -19,6 +19,7 @@ namespace FIFALib.DataAcess
 
         List<Equipe> GetTeam_ALL();
 
+        void CreerCompet(Competition comp);
 
 
     }

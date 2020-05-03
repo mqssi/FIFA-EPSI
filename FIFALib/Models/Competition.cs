@@ -12,6 +12,9 @@ namespace FIFALib.Models
     /// </summary>
      public class Competition
     {
+
+
+        public int Id { get; set; }
         /// <summary>
         /// Représente le nom d'une compétition
         /// </summary>
@@ -31,7 +34,7 @@ namespace FIFALib.Models
         /// <summary>
         /// Représente la date de début de la compétition
         /// </summary>
-        public DateTime DateCompetition { get { return DateTime.Now; } }
+        public DateTime DateCompetition { get; set;  }
 
         /// <summary>
         /// Représente les matchs de la compétition
@@ -41,6 +44,10 @@ namespace FIFALib.Models
         /// Représente les joueurs dans une compétition
         /// </summary>
         public List<Joueur> JoeursCompetition { get; set; } = new List<Joueur>();
+
+        public List<Equipe> EquipeInscrites { get; set; } = new List<Equipe>();
+
+        public List<List<Match>> Rounds { get; set; } = new List<List<Match>>();
 
     }
 }

@@ -92,6 +92,18 @@ namespace FIFAUi
         private void creationTournoiButton_Click(object sender, EventArgs e)
         {
 
+            Competition competition = new Competition();
+            competition.NomCompetition = nomTournoiValue.Text;
+            competition.DateCompetition = DateTime.Now;
+            competition.EquipeInscrites = EquipesSelected;
+            //créer matchups
+
+            CompLogic.CreerRounds(competition);
+
+
+            GlobalConfig.Connection.CreerCompet(competition);
+
+
         }
     }
 }

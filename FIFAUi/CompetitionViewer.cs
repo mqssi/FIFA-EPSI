@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FIFAUi
 {
-    public partial class Competition : Form
+    public partial class CompetitionViewer : Form
     {
-        public Competition()
+        public CompetitionViewer()
         {
             InitializeComponent();
         }

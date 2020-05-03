@@ -1,6 +1,6 @@
 ﻿namespace FIFAUi
 {
-    partial class Competition
+    partial class CompetitionViewer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Competition));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompetitionViewer));
             this.competitionLabel = new System.Windows.Forms.Label();
             this.joueur1Label = new System.Windows.Forms.Label();
             this.joueur2Label = new System.Windows.Forms.Label();
@@ -509,7 +509,7 @@
             this.pdfButton.Text = "PDF du Tournoi";
             this.pdfButton.UseVisualStyleBackColor = true;
             // 
-            // Competition
+            // CompetitionViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -563,7 +563,7 @@
             this.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.Name = "Competition";
+            this.Name = "CompetitionViewer";
             this.Text = "Competition";
             this.ResumeLayout(false);
             this.PerformLayout();

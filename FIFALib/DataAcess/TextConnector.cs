@@ -9,6 +9,11 @@ namespace FIFALib.DataAcess
 {
     public class TextConnector : IDataConnection
     {
+        public void CreerCompet(Competition comp)
+        {
+            throw new NotImplementedException();
+        }
+
         public Equipe CreerEquipe(Equipe model)
         {
             throw new NotImplementedException();

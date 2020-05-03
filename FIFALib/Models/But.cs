@@ -12,9 +12,9 @@ namespace FIFALib.Models
     /// </summary>
     public class But
     {
+        public int Id { get; set; }
 
 
- 
         /// <summary>
         /// Représente la minute du but dans un match
         /// </summary>
