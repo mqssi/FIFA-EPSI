@@ -21,6 +21,6 @@ namespace FIFALib.DataAcess
 
         void CreerCompet(Competition comp);
 
-
+        List<Competition> Get_CompALL();
     }
 }

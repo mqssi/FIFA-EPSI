@@ -72,8 +72,8 @@
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.jouerTourButton = new System.Windows.Forms.Button();
-            this.pdfButton = new System.Windows.Forms.Button();
+            this.imprimerButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // competitionLabel
@@ -93,9 +93,9 @@
             this.joueur1Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueur1Label.Location = new System.Drawing.Point(32, 638);
             this.joueur1Label.Name = "joueur1Label";
-            this.joueur1Label.Size = new System.Drawing.Size(145, 23);
+            this.joueur1Label.Size = new System.Drawing.Size(151, 23);
             this.joueur1Label.TabIndex = 1;
-            this.joueur1Label.Text = "<joueur1Label>";
+            this.joueur1Label.Text = "<equipe1Label>";
             // 
             // joueur2Label
             // 
@@ -103,9 +103,9 @@
             this.joueur2Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueur2Label.Location = new System.Drawing.Point(260, 638);
             this.joueur2Label.Name = "joueur2Label";
-            this.joueur2Label.Size = new System.Drawing.Size(149, 23);
+            this.joueur2Label.Size = new System.Drawing.Size(155, 23);
             this.joueur2Label.TabIndex = 2;
-            this.joueur2Label.Text = "<joueur2Label>";
+            this.joueur2Label.Text = "<equipe2Label>";
             // 
             // joueur3Label
             // 
@@ -113,9 +113,9 @@
             this.joueur3Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueur3Label.Location = new System.Drawing.Point(509, 638);
             this.joueur3Label.Name = "joueur3Label";
-            this.joueur3Label.Size = new System.Drawing.Size(148, 23);
+            this.joueur3Label.Size = new System.Drawing.Size(154, 23);
             this.joueur3Label.TabIndex = 3;
-            this.joueur3Label.Text = "<joueur3Label>";
+            this.joueur3Label.Text = "<equipe3Label>";
             // 
             // joueur4Label
             // 
@@ -123,9 +123,9 @@
             this.joueur4Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueur4Label.Location = new System.Drawing.Point(725, 638);
             this.joueur4Label.Name = "joueur4Label";
-            this.joueur4Label.Size = new System.Drawing.Size(149, 23);
+            this.joueur4Label.Size = new System.Drawing.Size(155, 23);
             this.joueur4Label.TabIndex = 4;
-            this.joueur4Label.Text = "<joueur4Label>";
+            this.joueur4Label.Text = "<equipe4Label>";
             // 
             // joueur6Label
             // 
@@ -133,9 +133,9 @@
             this.joueur6Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueur6Label.Location = new System.Drawing.Point(1193, 638);
             this.joueur6Label.Name = "joueur6Label";
-            this.joueur6Label.Size = new System.Drawing.Size(150, 23);
+            this.joueur6Label.Size = new System.Drawing.Size(156, 23);
             this.joueur6Label.TabIndex = 6;
-            this.joueur6Label.Text = "<joueur6Label>";
+            this.joueur6Label.Text = "<equipe6Label>";
             // 
             // joueur5Label
             // 
@@ -143,9 +143,9 @@
             this.joueur5Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueur5Label.Location = new System.Drawing.Point(978, 638);
             this.joueur5Label.Name = "joueur5Label";
-            this.joueur5Label.Size = new System.Drawing.Size(149, 23);
+            this.joueur5Label.Size = new System.Drawing.Size(155, 23);
             this.joueur5Label.TabIndex = 5;
-            this.joueur5Label.Text = "<joueur5Label>";
+            this.joueur5Label.Text = "<equipe5Label>";
             // 
             // joueur8Label
             // 
@@ -153,9 +153,9 @@
             this.joueur8Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueur8Label.Location = new System.Drawing.Point(1675, 638);
             this.joueur8Label.Name = "joueur8Label";
-            this.joueur8Label.Size = new System.Drawing.Size(150, 23);
+            this.joueur8Label.Size = new System.Drawing.Size(156, 23);
             this.joueur8Label.TabIndex = 8;
-            this.joueur8Label.Text = "<joueur8Label>";
+            this.joueur8Label.Text = "<equipe8Label>";
             // 
             // joueur7Label
             // 
@@ -163,9 +163,9 @@
             this.joueur7Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueur7Label.Location = new System.Drawing.Point(1458, 638);
             this.joueur7Label.Name = "joueur7Label";
-            this.joueur7Label.Size = new System.Drawing.Size(149, 23);
+            this.joueur7Label.Size = new System.Drawing.Size(155, 23);
             this.joueur7Label.TabIndex = 7;
-            this.joueur7Label.Text = "<joueur7Label>";
+            this.joueur7Label.Text = "<equipe7Label>";
             // 
             // joueurdemi1Label
             // 
@@ -173,9 +173,9 @@
             this.joueurdemi1Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueurdemi1Label.Location = new System.Drawing.Point(144, 493);
             this.joueurdemi1Label.Name = "joueurdemi1Label";
-            this.joueurdemi1Label.Size = new System.Drawing.Size(194, 23);
+            this.joueurdemi1Label.Size = new System.Drawing.Size(200, 23);
             this.joueurdemi1Label.TabIndex = 9;
-            this.joueurdemi1Label.Text = "<joueurdemi1Label>";
+            this.joueurdemi1Label.Text = "<equipedemi1Label>";
             // 
             // joueurdemi2Label
             // 
@@ -183,9 +183,9 @@
             this.joueurdemi2Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueurdemi2Label.Location = new System.Drawing.Point(594, 493);
             this.joueurdemi2Label.Name = "joueurdemi2Label";
-            this.joueurdemi2Label.Size = new System.Drawing.Size(198, 23);
+            this.joueurdemi2Label.Size = new System.Drawing.Size(204, 23);
             this.joueurdemi2Label.TabIndex = 10;
-            this.joueurdemi2Label.Text = "<joueurdemi2Label>";
+            this.joueurdemi2Label.Text = "<equipedemi2Label>";
             // 
             // joueurdemi3Label
             // 
@@ -193,9 +193,9 @@
             this.joueurdemi3Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueurdemi3Label.Location = new System.Drawing.Point(1066, 493);
             this.joueurdemi3Label.Name = "joueurdemi3Label";
-            this.joueurdemi3Label.Size = new System.Drawing.Size(197, 23);
+            this.joueurdemi3Label.Size = new System.Drawing.Size(203, 23);
             this.joueurdemi3Label.TabIndex = 11;
-            this.joueurdemi3Label.Text = "<joueurdemi3Label>";
+            this.joueurdemi3Label.Text = "<equipedemi3Label>";
             // 
             // joueurdemi4Label
             // 
@@ -203,9 +203,9 @@
             this.joueurdemi4Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueurdemi4Label.Location = new System.Drawing.Point(1540, 493);
             this.joueurdemi4Label.Name = "joueurdemi4Label";
-            this.joueurdemi4Label.Size = new System.Drawing.Size(198, 23);
+            this.joueurdemi4Label.Size = new System.Drawing.Size(204, 23);
             this.joueurdemi4Label.TabIndex = 12;
-            this.joueurdemi4Label.Text = "<joueurdemi4Label>";
+            this.joueurdemi4Label.Text = "<equipedemi4Label>";
             // 
             // joueurfinale1Label
             // 
@@ -213,9 +213,9 @@
             this.joueurfinale1Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueurfinale1Label.Location = new System.Drawing.Point(352, 314);
             this.joueurfinale1Label.Name = "joueurfinale1Label";
-            this.joueurfinale1Label.Size = new System.Drawing.Size(198, 23);
+            this.joueurfinale1Label.Size = new System.Drawing.Size(204, 23);
             this.joueurfinale1Label.TabIndex = 13;
-            this.joueurfinale1Label.Text = "<joueurfinale1Label>";
+            this.joueurfinale1Label.Text = "<equipefinale1Label>";
             // 
             // joueurfinale2Label
             // 
@@ -223,9 +223,9 @@
             this.joueurfinale2Label.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.joueurfinale2Label.Location = new System.Drawing.Point(1294, 323);
             this.joueurfinale2Label.Name = "joueurfinale2Label";
-            this.joueurfinale2Label.Size = new System.Drawing.Size(202, 23);
+            this.joueurfinale2Label.Size = new System.Drawing.Size(208, 23);
             this.joueurfinale2Label.TabIndex = 14;
-            this.joueurfinale2Label.Text = "<joueurfinale2Label>";
+            this.joueurfinale2Label.Text = "<equipefinale2Label>";
             // 
             // panel1
             // 
@@ -479,35 +479,31 @@
             this.panel28.Size = new System.Drawing.Size(5, 65);
             this.panel28.TabIndex = 39;
             // 
-            // jouerTourButton
+            // imprimerButton
             // 
-            this.jouerTourButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.jouerTourButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.jouerTourButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.jouerTourButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jouerTourButton.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jouerTourButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.jouerTourButton.Location = new System.Drawing.Point(784, 740);
-            this.jouerTourButton.Name = "jouerTourButton";
-            this.jouerTourButton.Size = new System.Drawing.Size(329, 62);
-            this.jouerTourButton.TabIndex = 43;
-            this.jouerTourButton.Text = "Jouer Tour";
-            this.jouerTourButton.UseVisualStyleBackColor = true;
+            this.imprimerButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.imprimerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.imprimerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.imprimerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imprimerButton.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imprimerButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.imprimerButton.Location = new System.Drawing.Point(784, 740);
+            this.imprimerButton.Name = "imprimerButton";
+            this.imprimerButton.Size = new System.Drawing.Size(329, 62);
+            this.imprimerButton.TabIndex = 43;
+            this.imprimerButton.Text = "Imprimer";
+            this.imprimerButton.UseVisualStyleBackColor = true;
+            this.imprimerButton.Click += new System.EventHandler(this.imprimerButton_Click);
             // 
-            // pdfButton
+            // label1
             // 
-            this.pdfButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.pdfButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.pdfButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pdfButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pdfButton.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pdfButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.pdfButton.Location = new System.Drawing.Point(1450, 45);
-            this.pdfButton.Name = "pdfButton";
-            this.pdfButton.Size = new System.Drawing.Size(329, 62);
-            this.pdfButton.TabIndex = 44;
-            this.pdfButton.Text = "PDF du Tournoi";
-            this.pdfButton.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(837, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 23);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "<gagnantLabel>";
             // 
             // CompetitionViewer
             // 
@@ -515,8 +511,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1841, 856);
-            this.Controls.Add(this.pdfButton);
-            this.Controls.Add(this.jouerTourButton);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.imprimerButton);
             this.Controls.Add(this.panel25);
             this.Controls.Add(this.panel26);
             this.Controls.Add(this.panel27);
@@ -615,7 +611,7 @@
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.Button jouerTourButton;
-        private System.Windows.Forms.Button pdfButton;
+        private System.Windows.Forms.Button imprimerButton;
+        private System.Windows.Forms.Label label1;
     }
 }

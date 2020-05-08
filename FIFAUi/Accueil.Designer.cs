@@ -39,9 +39,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(318, 49);
+            this.label1.Location = new System.Drawing.Point(326, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 38);
             this.label1.TabIndex = 0;
@@ -49,47 +50,54 @@
             // 
             // infosButton
             // 
+            this.infosButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.infosButton.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.infosButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.infosButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.infosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.infosButton.Location = new System.Drawing.Point(72, 381);
+            this.infosButton.Location = new System.Drawing.Point(80, 381);
             this.infosButton.Name = "infosButton";
             this.infosButton.Size = new System.Drawing.Size(168, 73);
             this.infosButton.TabIndex = 1;
             this.infosButton.Text = "Infos";
             this.infosButton.UseVisualStyleBackColor = true;
+            this.infosButton.Click += new System.EventHandler(this.infosButton_Click);
             // 
             // jouerButton
             // 
+            this.jouerButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jouerButton.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.jouerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.jouerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jouerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jouerButton.Location = new System.Drawing.Point(323, 381);
+            this.jouerButton.Location = new System.Drawing.Point(331, 381);
             this.jouerButton.Name = "jouerButton";
             this.jouerButton.Size = new System.Drawing.Size(168, 73);
             this.jouerButton.TabIndex = 2;
             this.jouerButton.Text = "Jouer";
             this.jouerButton.UseVisualStyleBackColor = true;
+            this.jouerButton.Click += new System.EventHandler(this.jouerButton_Click);
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(562, 381);
+            this.button2.Location = new System.Drawing.Point(570, 381);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 73);
             this.button2.TabIndex = 3;
             this.button2.Text = "Parties jouées";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::FIFAUi.Properties.Resources.image;
-            this.pictureBox1.Location = new System.Drawing.Point(296, 109);
+            this.pictureBox1.Location = new System.Drawing.Point(304, 109);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(218, 187);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(781, 567);
+            this.ClientSize = new System.Drawing.Size(797, 572);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.jouerButton);
@@ -110,8 +118,9 @@
             this.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Accueil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FIFAEPSI";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

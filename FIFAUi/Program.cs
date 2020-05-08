@@ -20,11 +20,12 @@ namespace FIFAUi
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Initialiser bdd
+            
 
             GlobalConfig.InitializeConnections(DatabaseType.Sql);
-             Application.Run(new CreationTournoi());
-            //Application.Run(new Accueil());
+            //Application.Run(new CreationTournoi());
+            Application.Run(new Accueil());
+            //Application.Run(new CompetitionViewer());
         }
     }
 }

@@ -15,10 +15,10 @@ namespace FIFAUi
     public partial class CreationTournoi : Form, IEquipeRequester
     {
 
-
-
         List<Equipe> EquipesDispo = GlobalConfig.Connection.GetTeam_ALL();
         List<Equipe> EquipesSelected = new List<Equipe>();
+
+
         public CreationTournoi()
         {
             InitializeComponent();
@@ -93,17 +93,22 @@ namespace FIFAUi
         {
 
             Competition competition = new Competition();
+            competition.EquipeInscrites = EquipesSelected;
             competition.NomCompetition = nomTournoiValue.Text;
             competition.DateCompetition = DateTime.Now;
-            competition.EquipeInscrites = EquipesSelected;
-            //créer matchups
 
+            //créer matchups
+            //TournoiViewer frm = new TournoiViewer(competition);
+            //frm.Show();
             CompLogic.CreerRounds(competition);
 
 
             GlobalConfig.Connection.CreerCompet(competition);
 
 
+
         }
+
+
     }
 }

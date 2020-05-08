@@ -17,3 +17,11 @@ C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\Dapper.xml
 C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.CreationTournoi.resources
 C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.TournoiViewer.resources
 C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.CompetitionViewer.resources
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.infos.resources
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.PastGames.resources
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\PdfSharp.dll
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\PdfSharp.xml
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\PdfSharp.Charting.xml
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\de\PdfSharp.Charting.resources.dll

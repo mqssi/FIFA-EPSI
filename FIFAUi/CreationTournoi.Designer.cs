@@ -105,9 +105,9 @@
             this.ajouterEquipeTournoiButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.ajouterEquipeTournoiButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.ajouterEquipeTournoiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ajouterEquipeTournoiButton.Location = new System.Drawing.Point(153, 347);
+            this.ajouterEquipeTournoiButton.Location = new System.Drawing.Point(469, 249);
             this.ajouterEquipeTournoiButton.Name = "ajouterEquipeTournoiButton";
-            this.ajouterEquipeTournoiButton.Size = new System.Drawing.Size(212, 51);
+            this.ajouterEquipeTournoiButton.Size = new System.Drawing.Size(106, 29);
             this.ajouterEquipeTournoiButton.TabIndex = 12;
             this.ajouterEquipeTournoiButton.Text = "Ajouter l\'équipe";
             this.ajouterEquipeTournoiButton.UseVisualStyleBackColor = true;
@@ -185,6 +185,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "CreationTournoi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Créer Tournoi";
             this.ResumeLayout(false);
             this.PerformLayout();

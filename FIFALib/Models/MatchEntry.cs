@@ -8,7 +8,12 @@ namespace FIFALib.Models
 {
     public class MatchEntry
     {
-        public int Id { get; set; }
+        public int ID_MatchEntry { get; set; }
+
+
+        public int ID_EquipeJouant { get; set; }
+
+        public int ID_MatchParent { get; set; }
         public Equipe EquipeJouant { get; set; }
 
         public double Score { get; set; }

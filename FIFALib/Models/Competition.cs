@@ -14,7 +14,7 @@ namespace FIFALib.Models
     {
 
 
-        public int Id { get; set; }
+        public int ID_Competition{ get; set; }
         /// <summary>
         /// Représente le nom d'une compétition
         /// </summary>

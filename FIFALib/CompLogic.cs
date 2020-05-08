@@ -18,6 +18,7 @@ namespace FIFALib
             List<Equipe> randomizedTeams = Randomizer(comp.EquipeInscrites);
             int rounds = GetNombreRounds(randomizedTeams.Count);
             int byes = NumberOfByes(rounds, randomizedTeams.Count);
+            
             comp.Rounds.Add(CreerPremierRound(byes, randomizedTeams));
             CreerAutresRounds(comp, rounds);
 
@@ -108,7 +109,7 @@ namespace FIFALib
         private static int GetNombreRounds(int equipeCount)
         {
 
-            int output = -1;
+            int output = 1;
             int val = 2;
 
             while (val < equipeCount)

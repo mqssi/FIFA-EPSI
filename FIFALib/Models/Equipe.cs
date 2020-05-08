@@ -11,11 +11,11 @@ namespace FIFALib.Models
 
 
 
-        public int Id { get; set; }
+        public int ID_Equipe { get; set; }
         public List<Joueur> MembreEquipe { get; set; } = new List<Joueur>();
         public string Nom_Equipe { get; set; }
 
-
+        
 
     }
 }

@@ -40,5 +40,10 @@ namespace FIFALib.DataAcess
         {
             throw new NotImplementedException();
         }
+
+        public List<Competition> Get_CompALL()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -11,10 +11,10 @@ namespace FIFALib.Models
     /// </summary>
     public class Match
     {
+      
 
 
-
-        public int Id { get; set; }
+        public int ID_Match { get; set; }
         /// <summary>
         /// Repérsente la date où le match a commencé
         /// </summary>
@@ -25,10 +25,16 @@ namespace FIFALib.Models
         /// </summary>
         public string ResultMatch { get; set; }
 
+
+
+
+        public int ID_Gagnant { get; set; }
         /// <summary>
         /// Repérsente le gagnant d'un match
         /// </summary>
         public Equipe Winner{ get; set; }
+
+       
 
         /// <summary>
         /// Repérsente le Round du Tournoi
@@ -57,7 +63,41 @@ namespace FIFALib.Models
         public int NombreBut { get; set; }
 
       
+        public string DisplayName
+        {
 
+
+            get
+            {
+                string output = "";
+
+                foreach(MatchEntry m in Entries)
+                {
+
+                    if (m.EquipeJouant != null)
+                    {
+                        if (output.Length == 0)
+                        {
+
+                            output = m.EquipeJouant.Nom_Equipe;
+                        } else
+                        {
+                            output += $" vs. {m.EquipeJouant.Nom_Equipe}";
+
+                        }
+                    }
+                    else
+                    {
+
+                        output = "Le match n'est pas encore déterminé";
+                        break;
+
+                    }
+
+                }
+                return output;
+            }
+        }
 
     }
 }
