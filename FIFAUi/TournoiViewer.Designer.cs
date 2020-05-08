@@ -42,6 +42,7 @@
             this.equipe2Label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.scoreRoundButton = new System.Windows.Forms.Button();
+            this.unplayedButton = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // TournoiLabel
@@ -171,6 +172,18 @@
             this.scoreRoundButton.TabIndex = 22;
             this.scoreRoundButton.Text = "Score";
             this.scoreRoundButton.UseVisualStyleBackColor = true;
+            this.scoreRoundButton.Click += new System.EventHandler(this.scoreRoundButton_Click);
+            // 
+            // unplayedButton
+            // 
+            this.unplayedButton.AutoSize = true;
+            this.unplayedButton.Location = new System.Drawing.Point(104, 88);
+            this.unplayedButton.Name = "unplayedButton";
+            this.unplayedButton.Size = new System.Drawing.Size(169, 23);
+            this.unplayedButton.TabIndex = 23;
+            this.unplayedButton.Text = "Matchs non joués";
+            this.unplayedButton.UseVisualStyleBackColor = true;
+            this.unplayedButton.CheckedChanged += new System.EventHandler(this.unplayedButton_CheckedChanged);
             // 
             // TournoiViewer
             // 
@@ -178,6 +191,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(795, 434);
+            this.Controls.Add(this.unplayedButton);
             this.Controls.Add(this.scoreRoundButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.scoreEquipe2Value);
@@ -218,5 +232,6 @@
         private System.Windows.Forms.Label equipe2Label;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button scoreRoundButton;
+        private System.Windows.Forms.CheckBox unplayedButton;
     }
 }

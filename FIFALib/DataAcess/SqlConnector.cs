@@ -40,7 +40,7 @@ namespace FIFALib.DataAcess
 
             var c = new DynamicParameters();
 
-                c.Add("@Comp_Nom", comp.NomCompetition);
+                c.Add("@Comp_Nom", comp.Comp_Nom);
                 c.Add("@ID_Competition", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
                 connection.Execute("dbo.spComp_Insert", c, commandType: CommandType.StoredProcedure);
 
@@ -81,7 +81,7 @@ namespace FIFALib.DataAcess
                 {
                     var c = new DynamicParameters();
                     c.Add("@ID_Competition", comp.ID_Competition);
-                    c.Add("@Match_Round", match.RoundMatch);
+                    c.Add("@Match_Round", match.Match_Round);
                     c.Add("@ID_Match", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
 
@@ -278,7 +278,12 @@ namespace FIFALib.DataAcess
                 foreach (Competition c in output)
                 {
 
-                    c.EquipeInscrites = connection.Query<Equipe>("dbo.spEquipe_GetByComp").ToList();
+                    j = new DynamicParameters();
+
+                    j.Add("@ID_Competition", c.ID_Competition);
+
+
+                    c.EquipeInscrites = connection.Query<Equipe>("dbo.spEquipe_GetByComp",j, commandType: CommandType.StoredProcedure).ToList();
 
 
                     foreach (Equipe equipe in c.EquipeInscrites)
@@ -333,13 +338,21 @@ namespace FIFALib.DataAcess
                     }
 
                     List<Match> currRow = new List<Match>();
+                    int currentRound = 1;
                     foreach (Match m in matches)
                     {
 
+                        if(m.Match_Round > currentRound)
+                        {
+                            c.Rounds.Add(currRow);
+                            currRow = new List<Match>();
+                            currentRound += 1;
 
+                        }
+                        currRow.Add(m);
                     }
 
-
+                    c.Rounds.Add(currRow);
 
                 }
 

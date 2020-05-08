@@ -19,10 +19,25 @@ namespace FIFAUi
         public PastGames()
         {
             InitializeComponent();
+            LienListe();
         }
 
 
 
+        private void LienListe()
+        {
 
+            LoadCompsDropDown.DataSource = competitions;
+            LoadCompsDropDown.DisplayMember = "Comp_Nom";
+
+
+        }
+
+        private void LoadCompButton_Click(object sender, EventArgs e)
+        {
+            Competition comp = (Competition)LoadCompsDropDown.SelectedItem;
+            TournoiViewer frm = new TournoiViewer(comp);
+            frm.Show();
+        }
     }
 }

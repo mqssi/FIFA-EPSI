@@ -39,7 +39,7 @@ namespace FIFALib
                     matchActuel.Entries.Add(new MatchEntry { MatchParent = match });
                     if(matchActuel.Entries.Count > 1)
                     {
-                        matchActuel.RoundMatch = round;
+                        matchActuel.Match_Round = round;
                         roundActuel.Add(matchActuel);
                         matchActuel = new Match();
 
@@ -71,7 +71,7 @@ namespace FIFALib
 
                 if (byes > 0 || curr.Entries.Count > 1)
                 {
-                    curr.RoundMatch = 1;
+                    curr.Match_Round = 1;
                     output.Add(curr);
                     curr = new Match();
                     if (byes > 0)

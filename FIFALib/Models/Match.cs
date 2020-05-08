@@ -39,7 +39,7 @@ namespace FIFALib.Models
         /// <summary>
         /// Repérsente le Round du Tournoi
         /// </summary>
-        public int RoundMatch { get; set; }
+        public int Match_Round { get; set; }
 
 
 

@@ -30,26 +30,41 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PastGames));
             this.creationTournoiLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.LoadCompsDropDown = new System.Windows.Forms.ComboBox();
+            this.LoadCompButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // creationTournoiLabel
             // 
             this.creationTournoiLabel.AutoSize = true;
             this.creationTournoiLabel.Font = new System.Drawing.Font("Montserrat Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.creationTournoiLabel.Location = new System.Drawing.Point(295, 57);
+            this.creationTournoiLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.creationTournoiLabel.Location = new System.Drawing.Point(224, 73);
             this.creationTournoiLabel.Name = "creationTournoiLabel";
-            this.creationTournoiLabel.Size = new System.Drawing.Size(177, 38);
+            this.creationTournoiLabel.Size = new System.Drawing.Size(330, 38);
             this.creationTournoiLabel.TabIndex = 3;
-            this.creationTournoiLabel.Text = "Tournois ...";
+            this.creationTournoiLabel.Text = "Compétitions Crées:";
             // 
-            // comboBox1
+            // LoadCompsDropDown
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(252, 137);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(241, 21);
-            this.comboBox1.TabIndex = 4;
+            this.LoadCompsDropDown.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadCompsDropDown.FormattingEnabled = true;
+            this.LoadCompsDropDown.Location = new System.Drawing.Point(252, 137);
+            this.LoadCompsDropDown.Name = "LoadCompsDropDown";
+            this.LoadCompsDropDown.Size = new System.Drawing.Size(267, 33);
+            this.LoadCompsDropDown.TabIndex = 4;
+            // 
+            // LoadCompButton
+            // 
+            this.LoadCompButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadCompButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LoadCompButton.Location = new System.Drawing.Point(252, 216);
+            this.LoadCompButton.Name = "LoadCompButton";
+            this.LoadCompButton.Size = new System.Drawing.Size(267, 67);
+            this.LoadCompButton.TabIndex = 5;
+            this.LoadCompButton.Text = "Charger Compétition";
+            this.LoadCompButton.UseVisualStyleBackColor = true;
+            this.LoadCompButton.Click += new System.EventHandler(this.LoadCompButton_Click);
             // 
             // PastGames
             // 
@@ -57,7 +72,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.LoadCompButton);
+            this.Controls.Add(this.LoadCompsDropDown);
             this.Controls.Add(this.creationTournoiLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PastGames";
@@ -71,6 +87,7 @@
         #endregion
 
         private System.Windows.Forms.Label creationTournoiLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox LoadCompsDropDown;
+        private System.Windows.Forms.Button LoadCompButton;
     }
 }

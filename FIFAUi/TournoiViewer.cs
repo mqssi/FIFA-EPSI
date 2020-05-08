@@ -1,4 +1,5 @@
 ﻿using FIFALib.Models;
+using PdfSharp.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +36,7 @@ namespace FIFAUi
         private void LoadFormData()
         {
 
-            nomCompetitionLabel.Text = competition.NomCompetition;
+            nomCompetitionLabel.Text = competition.Comp_Nom;
 
 
         }
@@ -58,25 +59,26 @@ namespace FIFAUi
         private void LoadRounds()
         {
 
-            //rounds = new BindingList<int>();
             rounds.Clear();
             rounds.Add(1);
             int currRound = 1;
             foreach(List<Match>matches in competition.Rounds)
             {
 
-                if(matches.First().RoundMatch > currRound)
+                if(matches.First().Match_Round > currRound)
                 {
-                    currRound = matches.First().RoundMatch;
+                    currRound = matches.First().Match_Round;
                     rounds.Add(currRound);
 
                 }
 
             }
 
-            //LoadMatchs(1);
+            LoadMatchs(1);
         }
 
+      
+        
         private void roundDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadMatchs((int)roundDropdown.SelectedItem);
@@ -94,12 +96,18 @@ namespace FIFAUi
             foreach (List<Match> matches in competition.Rounds)
             {
 
-                if(matches.First().RoundMatch == round)
+                if(matches.First().Match_Round == round)
                 {
                     Selectedmatch.Clear();
                     foreach (Match m in matches)
                     {
-                        Selectedmatch.Add(m);
+
+                        if (m.Winner == null || !unplayedButton.Checked)
+                        {
+                            Selectedmatch.Add(m);
+
+                        }
+                        
 
                     }
                     
@@ -108,64 +116,69 @@ namespace FIFAUi
 
 
             }
-
+            if(Selectedmatch.Count > 0) { 
             LoadMatch(Selectedmatch.First());
-
+            }
         }
 
 
-       public void LoadMatch(Match m)
+       private void LoadMatch(Match m)
         {
-
-           
-
-            for(int i = 0; i< m.Entries.Count; i++)
+            if (m == null)
             {
-
-                if(i == 0)
-                {
-                    if (m.Entries[0].EquipeJouant != null)
-                    {
-
-                        equipe1Label.Text = m.Entries[0].EquipeJouant.Nom_Equipe;
-                        scoreEquipe1Value.Text = m.Entries[0].Score.ToString();
-
-
-                        equipe2Label.Text = "<exempt>";
-                        scoreEquipe2Value.Text = "0";
-                    }
-                    else
-                    {
-                        equipe1Label.Text = "Pas encore définis";
-                        scoreEquipe1Value.Text = "";
-                    }
-
-
-
-                }
-
-                if(i == 1)
-                {
-
-                    if (m.Entries[1].EquipeJouant != null)
-                    {
-
-                        equipe2Label.Text = m.Entries[1].EquipeJouant.Nom_Equipe;
-                        scoreEquipe2Value.Text = m.Entries[1].Score.ToString();
-
-                    }
-                    else
-                    {
-                        equipe2Label.Text = "Pas encore définis";
-                        scoreEquipe2Value.Text = "";
-                    }
-
-
-
-                }
-
+                
+                return;
             }
+            else
+            {
+                for (int i = 0; i < m.Entries.Count; i++)
+                {
 
+                    if (i == 0)
+                    {
+                        if (m.Entries[0].EquipeJouant != null)
+                        {
+
+                            equipe1Label.Text = m.Entries[0].EquipeJouant.Nom_Equipe;
+                            scoreEquipe1Value.Text = m.Entries[0].Score.ToString();
+
+
+                            equipe2Label.Text = "<exempt>";
+                            scoreEquipe2Value.Text = "0";
+                        }
+                        else
+                        {
+                            equipe1Label.Text = "Pas encore définis";
+                            scoreEquipe1Value.Text = "";
+                        }
+
+
+
+                    }
+
+                    if (i == 1)
+                    {
+
+                        if (m.Entries[1].EquipeJouant != null)
+                        {
+
+                            equipe2Label.Text = m.Entries[1].EquipeJouant.Nom_Equipe;
+                            scoreEquipe2Value.Text = m.Entries[1].Score.ToString();
+
+                        }
+                        else
+                        {
+                            equipe2Label.Text = "Pas encore définis";
+                            scoreEquipe2Value.Text = "";
+                        }
+
+
+
+                    }
+
+
+                }
+            }
         }
 
 
@@ -173,6 +186,97 @@ namespace FIFAUi
         {
 
             LoadMatch((Match)matchUpListBox.SelectedItem);
+        }
+
+        private void unplayedButton_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadMatchs((int)roundDropdown.SelectedItem);
+        }
+
+        private void scoreRoundButton_Click(object sender, EventArgs e)
+        {
+            Match m = (Match)matchUpListBox.SelectedItem;
+            double equipe1Score = 0;
+            double equipe2Score = 0;
+            for (int i = 0; i < m.Entries.Count; i++)
+            {
+
+                if (i == 0)
+                {
+                    if (m.Entries[0].EquipeJouant != null)
+                    {
+
+                    
+                        bool scoreValid = double.TryParse(scoreEquipe1Value.Text, out equipe1Score);
+
+                        if (scoreValid) 
+                        {
+                            m.Entries[0].Score = equipe1Score;
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Entrée invalide");
+                            return;
+                        }
+
+                    }
+
+
+
+
+                }
+
+                if (i == 1)
+                {
+
+                    if (m.Entries[1].EquipeJouant != null)
+                    {
+
+                        equipe2Label.Text = m.Entries[0].EquipeJouant.Nom_Equipe;
+                       
+                        bool scoreValid = double.TryParse(scoreEquipe2Value.Text, out equipe2Score);
+
+                        if (scoreValid)
+                        {
+                            m.Entries[1].Score = equipe2Score;
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Entrée invalide");
+                            return;
+                        }
+
+
+
+                    }
+
+
+
+
+                }
+
+
+            }
+
+            if(equipe1Score > equipe2Score)
+            {
+
+                m.Winner = m.Entries[0].EquipeJouant;
+
+            }
+            else if (equipe2Score > equipe1Score)
+            {
+
+                m.Winner = m.Entries[1].EquipeJouant;
+            }
+            else
+            {
+
+                MessageBox.Show("Il faut un gagnant, pas de match nul possible");
+            }
+
         }
     }
 }

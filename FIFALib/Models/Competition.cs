@@ -18,7 +18,7 @@ namespace FIFALib.Models
         /// <summary>
         /// Représente le nom d'une compétition
         /// </summary>
-        public string NomCompetition { get; set; }
+        public string Comp_Nom { get; set; }
 
 
         /// <summary>
