@@ -14,16 +14,16 @@ namespace FIFALib.DataAcess
             throw new NotImplementedException();
         }
 
-        public Equipe CreerEquipe(Equipe model)
+        public void CreerEquipe(Equipe model)
         {
             throw new NotImplementedException();
         }
 
-        public Joueur CreerJoueur(Joueur model)
+        public void CreerJoueur(Joueur model)
         {
             model.Id = 1;
 
-            return model;
+            
         }
 
         public List<Joueur> GetALLJoueur()
@@ -42,6 +42,11 @@ namespace FIFALib.DataAcess
         }
 
         public List<Competition> Get_CompALL()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateMatch(Match model)
         {
             throw new NotImplementedException();
         }

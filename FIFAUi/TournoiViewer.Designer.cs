@@ -35,12 +35,12 @@
             this.roundLabel = new System.Windows.Forms.Label();
             this.matchUpListBox = new System.Windows.Forms.ListBox();
             this.equipe1Label = new System.Windows.Forms.Label();
-            this.scoreLabel = new System.Windows.Forms.Label();
+            this.scoreEquipe1Label = new System.Windows.Forms.Label();
             this.scoreEquipe1Value = new System.Windows.Forms.TextBox();
             this.scoreEquipe2Value = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.scoreEquipe2Label = new System.Windows.Forms.Label();
             this.equipe2Label = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.vsLabel = new System.Windows.Forms.Label();
             this.scoreRoundButton = new System.Windows.Forms.Button();
             this.unplayedButton = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -104,15 +104,15 @@
             this.equipe1Label.TabIndex = 15;
             this.equipe1Label.Text = "<equipe1>";
             // 
-            // scoreLabel
+            // scoreEquipe1Label
             // 
-            this.scoreLabel.AutoSize = true;
-            this.scoreLabel.Font = new System.Drawing.Font("Montserrat Light", 16F);
-            this.scoreLabel.Location = new System.Drawing.Point(333, 202);
-            this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(71, 26);
-            this.scoreLabel.TabIndex = 16;
-            this.scoreLabel.Text = "Score";
+            this.scoreEquipe1Label.AutoSize = true;
+            this.scoreEquipe1Label.Font = new System.Drawing.Font("Montserrat Light", 16F);
+            this.scoreEquipe1Label.Location = new System.Drawing.Point(333, 202);
+            this.scoreEquipe1Label.Name = "scoreEquipe1Label";
+            this.scoreEquipe1Label.Size = new System.Drawing.Size(75, 26);
+            this.scoreEquipe1Label.TabIndex = 16;
+            this.scoreEquipe1Label.Text = "But(s)";
             // 
             // scoreEquipe1Value
             // 
@@ -128,15 +128,15 @@
             this.scoreEquipe2Value.Size = new System.Drawing.Size(101, 27);
             this.scoreEquipe2Value.TabIndex = 20;
             // 
-            // label1
+            // scoreEquipe2Label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Light", 16F);
-            this.label1.Location = new System.Drawing.Point(333, 330);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 26);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Score";
+            this.scoreEquipe2Label.AutoSize = true;
+            this.scoreEquipe2Label.Font = new System.Drawing.Font("Montserrat Light", 16F);
+            this.scoreEquipe2Label.Location = new System.Drawing.Point(333, 330);
+            this.scoreEquipe2Label.Name = "scoreEquipe2Label";
+            this.scoreEquipe2Label.Size = new System.Drawing.Size(75, 26);
+            this.scoreEquipe2Label.TabIndex = 19;
+            this.scoreEquipe2Label.Text = "But(s)";
             // 
             // equipe2Label
             // 
@@ -148,16 +148,16 @@
             this.equipe2Label.TabIndex = 18;
             this.equipe2Label.Text = "<equipe2>";
             // 
-            // label2
+            // vsLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat Light", 16F);
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(405, 246);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 26);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "vs";
+            this.vsLabel.AutoSize = true;
+            this.vsLabel.Font = new System.Drawing.Font("Montserrat Light", 16F);
+            this.vsLabel.ForeColor = System.Drawing.Color.Red;
+            this.vsLabel.Location = new System.Drawing.Point(405, 246);
+            this.vsLabel.Name = "vsLabel";
+            this.vsLabel.Size = new System.Drawing.Size(33, 26);
+            this.vsLabel.TabIndex = 21;
+            this.vsLabel.Text = "vs";
             // 
             // scoreRoundButton
             // 
@@ -193,12 +193,12 @@
             this.ClientSize = new System.Drawing.Size(795, 434);
             this.Controls.Add(this.unplayedButton);
             this.Controls.Add(this.scoreRoundButton);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.vsLabel);
             this.Controls.Add(this.scoreEquipe2Value);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.scoreEquipe2Label);
             this.Controls.Add(this.equipe2Label);
             this.Controls.Add(this.scoreEquipe1Value);
-            this.Controls.Add(this.scoreLabel);
+            this.Controls.Add(this.scoreEquipe1Label);
             this.Controls.Add(this.equipe1Label);
             this.Controls.Add(this.matchUpListBox);
             this.Controls.Add(this.roundDropdown);
@@ -225,12 +225,12 @@
         private System.Windows.Forms.Label roundLabel;
         private System.Windows.Forms.ListBox matchUpListBox;
         private System.Windows.Forms.Label equipe1Label;
-        private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Label scoreEquipe1Label;
         private System.Windows.Forms.TextBox scoreEquipe1Value;
         private System.Windows.Forms.TextBox scoreEquipe2Value;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label scoreEquipe2Label;
         private System.Windows.Forms.Label equipe2Label;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label vsLabel;
         private System.Windows.Forms.Button scoreRoundButton;
         private System.Windows.Forms.CheckBox unplayedButton;
     }

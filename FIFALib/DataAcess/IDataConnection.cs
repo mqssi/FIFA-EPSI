@@ -10,17 +10,20 @@ namespace FIFALib.DataAcess
    public interface IDataConnection
     {
 
-        Joueur CreerJoueur(Joueur model);
+        void CreerJoueur(Joueur model);
 
-        Equipe CreerEquipe(Equipe model);
-
+        void CreerEquipe(Equipe model);
+        void UpdateMatch(Match model);
+        void CreerCompet(Competition comp);
 
         List<Joueur> GetALLJoueur();
 
         List<Equipe> GetTeam_ALL();
 
-        void CreerCompet(Competition comp);
+        
 
         List<Competition> Get_CompALL();
+
+        
     }
 }

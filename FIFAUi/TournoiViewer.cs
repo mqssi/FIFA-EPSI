@@ -1,4 +1,5 @@
-﻿using FIFALib.Models;
+﻿using FIFALib;
+using FIFALib.Models;
 using PdfSharp.Internal;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace FIFAUi
 {
@@ -119,8 +121,31 @@ namespace FIFAUi
             if(Selectedmatch.Count > 0) { 
             LoadMatch(Selectedmatch.First());
             }
+
+            DisplayMatchInfo();
         }
 
+
+
+        private void DisplayMatchInfo()
+        {
+
+            bool isVisible = (Selectedmatch.Count > 0);
+
+            equipe1Label.Visible = isVisible;
+            scoreEquipe1Value.Visible = isVisible;
+            scoreEquipe1Label.Visible = isVisible;
+
+
+            equipe2Label.Visible = isVisible;
+            scoreEquipe2Value.Visible = isVisible;
+            scoreEquipe2Label.Visible = isVisible;
+
+            scoreRoundButton.Visible = isVisible;
+            vsLabel.Visible = isVisible;
+
+
+        }
 
        private void LoadMatch(Match m)
         {
@@ -260,23 +285,51 @@ namespace FIFAUi
 
             }
 
-            if(equipe1Score > equipe2Score)
-            {
+            //if(equipe1Score > equipe2Score)
+            //{
 
-                m.Winner = m.Entries[0].EquipeJouant;
+            //    m.Winner = m.Entries[0].EquipeJouant;
 
-            }
-            else if (equipe2Score > equipe1Score)
-            {
+            //}
+            //else if (equipe2Score > equipe1Score)
+            //{
 
-                m.Winner = m.Entries[1].EquipeJouant;
-            }
-            else
-            {
+            //    m.Winner = m.Entries[1].EquipeJouant;
+            //}
+            //else
+            //{
 
-                MessageBox.Show("Il faut un gagnant, pas de match nul possible");
-            }
+            //    MessageBox.Show("Il faut un gagnant, pas de match nul possible");
+            //}
 
+            //foreach (List<Match> round in competition.Rounds)
+            //{
+
+            //    foreach (Match rm in round)
+            //    {
+            //        foreach (MatchEntry me in rm.Entries)
+            //        {
+
+            //            if(me.MatchParent != null) 
+            //            { 
+
+            //                if(me.MatchParent.ID_Match == m.ID_Match)
+            //                {
+
+            //                    me.EquipeJouant = m.Winner;
+            //                    GlobalConfig.Connection.UpdateMatch(rm);
+            //                }
+
+            //            }
+            //        }
+
+            //    }
+
+            //}
+            CompLogic.UpdateCompResults(competition);
+            LoadMatchs((int)roundDropdown.SelectedItem);
+
+            //GlobalConfig.Connection.UpdateMatch(m);
         }
     }
 }

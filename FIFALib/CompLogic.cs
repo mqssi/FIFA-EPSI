@@ -128,5 +128,64 @@ namespace FIFALib
             // cards.OrderBy(a => Guid.NewGuid()).ToList();
             return equipes.OrderBy(a => Guid.NewGuid()).ToList();
         }
+
+
+        public static void UpdateCompResults(Competition model)
+        {
+
+
+
+
+
+            //if (equipe1Score > equipe2Score)
+            //{
+
+            //    m.Winner = m.Entries[0].EquipeJouant;
+
+            //}
+            //else if (equipe2Score > equipe1Score)
+            //{
+
+            //    m.Winner = m.Entries[1].EquipeJouant;
+            //}
+            //else
+            //{
+
+            //    MessageBox.Show("Il faut un gagnant, pas de match nul possible");
+            //}
+
+            //foreach (List<Match> round in model.Rounds)
+            //{
+
+            //    foreach (Match rm in round)
+            //    {
+            //        foreach (MatchEntry me in rm.Entries)
+            //        {
+
+            //            if (me.MatchParent != null)
+            //            {
+
+            //                if (me.MatchParent.ID_Match == m.ID_Match)
+            //                {
+
+            //                    me.EquipeJouant = m.Winner;
+            //                    GlobalConfig.Connection.UpdateMatch(rm);
+            //                }
+
+            //            }
+            //        }
+
+            //    }
+
+            //}
+
+            
+
+           // GlobalConfig.Connection.UpdateMatch(m);
+
+
+        }
+
+
     }
 }

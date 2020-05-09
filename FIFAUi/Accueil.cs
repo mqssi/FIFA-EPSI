@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace FIFAUi
 {
     public partial class Accueil : Form
     {
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
+
+        
         public Accueil()
         {
+            
             InitializeComponent();
+            player.URL = "";
         }
 
         private void jouerButton_Click(object sender, EventArgs e)
@@ -46,6 +52,29 @@ namespace FIFAUi
 
 
             pg.Show();
+
+        }
+
+        private void musicButton_Click(object sender, EventArgs e)
+        {
+            if(player.URL == "")   
+          {
+                player.URL = "johnny.MP3";
+                player.controls.play();
+            }
+
+            player.controls.play();
+
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            
+            
+            player.controls.pause();
 
         }
     }

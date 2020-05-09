@@ -33,6 +33,8 @@
             this.infosButton = new System.Windows.Forms.Button();
             this.jouerButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.musicButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,11 +44,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(326, 49);
+            this.label1.Location = new System.Drawing.Point(280, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 38);
+            this.label1.Size = new System.Drawing.Size(263, 38);
             this.label1.TabIndex = 0;
-            this.label1.Text = "FIFA_EPSI";
+            this.label1.Text = "CROSSED_EPSI";
             // 
             // infosButton
             // 
@@ -93,6 +95,26 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // musicButton
+            // 
+            this.musicButton.Location = new System.Drawing.Point(80, 122);
+            this.musicButton.Name = "musicButton";
+            this.musicButton.Size = new System.Drawing.Size(77, 61);
+            this.musicButton.TabIndex = 5;
+            this.musicButton.Text = "music";
+            this.musicButton.UseVisualStyleBackColor = true;
+            this.musicButton.Click += new System.EventHandler(this.musicButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(80, 203);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 56);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "pause";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -110,6 +132,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(797, 572);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.musicButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.jouerButton);
@@ -135,6 +159,8 @@
         private System.Windows.Forms.Button jouerButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button musicButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

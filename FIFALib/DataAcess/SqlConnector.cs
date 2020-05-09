@@ -141,7 +141,7 @@ namespace FIFALib.DataAcess
 
         }
 
-        public Equipe CreerEquipe(Equipe model)
+        public void CreerEquipe(Equipe model)
         {
 
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
@@ -171,7 +171,7 @@ namespace FIFALib.DataAcess
 
                 }
 
-                return model;
+                
 
 
             }
@@ -192,7 +192,7 @@ namespace FIFALib.DataAcess
         /// </summary>
         /// <param name="model"> Les informations concernants un joueur</param>
         /// <returns>Le Pseudo, Nom, Prénom, Mail et l'Id du Joueur</returns>
-        public Joueur CreerJoueur(Joueur model)
+        public void CreerJoueur(Joueur model)
         {
 
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
@@ -214,7 +214,7 @@ namespace FIFALib.DataAcess
 
                 model.Id = j.Get<int>("@ID_Joueur");
 
-                return model;
+                
 
 
             }
@@ -361,6 +361,42 @@ namespace FIFALib.DataAcess
             return output;
 
 
+        }
+
+        public void UpdateMatch(Match model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                // spMatch_Update @ID_Match, @ID_Gagnant
+
+                var c = new DynamicParameters();
+                if(model.Winner != null) { 
+
+                c.Add("@ID_Match", model.ID_Match);
+                c.Add("@ID_Gagnant", model.ID_Gagnant);
+
+                connection.Execute("dbo.spMatch_Update", c, commandType: CommandType.StoredProcedure);
+                }
+
+                // spMatchEntry_Update @ID_MatchEntry @ID_EquipeJouant @Score
+
+                foreach (MatchEntry me in model.Entries)
+                {
+
+
+                    c = new DynamicParameters();
+                    if(me.EquipeJouant!= null) { 
+                    c.Add("@ID_MatchEntry", me.ID_MatchEntry);
+                    c.Add("@ID_EquipeJouant", me.EquipeJouant.ID_Equipe);
+                    c.Add("@Score", me.Score);
+
+                    connection.Execute("dbo.spMatchEntry_Update", c, commandType: CommandType.StoredProcedure);
+                    }
+
+                }
+
+
+            }
         }
     }
 }
