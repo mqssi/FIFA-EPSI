@@ -24,7 +24,7 @@ namespace FIFALib.DataAcess
                 SaveCompEquipes(connection, comp);
                 SaveCompRounds(connection, comp);
 
-
+                CompLogic.UpdateCompResults(comp);
             }
 
 

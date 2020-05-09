@@ -1,6 +1,7 @@
 ﻿using FIFALib.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace FIFALib
             
             comp.Rounds.Add(CreerPremierRound(byes, randomizedTeams));
             CreerAutresRounds(comp, rounds);
+           
 
         }
 
@@ -132,11 +134,31 @@ namespace FIFALib
 
         public static void UpdateCompResults(Competition model)
         {
+            List<Match> toScore = new List<Match>();
+            foreach (List<Match> round in model.Rounds)
+            {
+                foreach (Match rm in round)
+                {
+                    if ( rm.Winner == null &&  (rm.Entries.Any(x=> x.Score != 0) || rm.Entries.Count ==1))
+                    {
+
+                        toScore.Add(rm);
+
+                    }
 
 
+                }
 
 
+            }
 
+
+            MarkWinnerInMatchs(toScore);
+
+
+            AdvanceWinners(toScore, model);
+
+            toScore.ForEach(x => GlobalConfig.Connection.UpdateMatch(x));
             //if (equipe1Score > equipe2Score)
             //{
 
@@ -154,35 +176,126 @@ namespace FIFALib
             //    MessageBox.Show("Il faut un gagnant, pas de match nul possible");
             //}
 
-            //foreach (List<Match> round in model.Rounds)
-            //{
 
-            //    foreach (Match rm in round)
-            //    {
-            //        foreach (MatchEntry me in rm.Entries)
-            //        {
-
-            //            if (me.MatchParent != null)
-            //            {
-
-            //                if (me.MatchParent.ID_Match == m.ID_Match)
-            //                {
-
-            //                    me.EquipeJouant = m.Winner;
-            //                    GlobalConfig.Connection.UpdateMatch(rm);
-            //                }
-
-            //            }
-            //        }
-
-            //    }
-
-            //}
 
             
 
            // GlobalConfig.Connection.UpdateMatch(m);
 
+
+        }
+
+        private static void AdvanceWinners(List<Match> models, Competition competition)
+        {
+            foreach (Match m in models)
+            {
+
+
+                foreach (List<Match> round in competition.Rounds)
+                {
+
+                    foreach (Match rm in round)
+                    {
+                        foreach (MatchEntry me in rm.Entries)
+                        {
+
+                            if (me.MatchParent != null)
+                            {
+
+                                if (me.MatchParent.ID_Match == m.ID_Match)
+                                {
+
+                                    me.EquipeJouant = m.Winner;
+                                    GlobalConfig.Connection.UpdateMatch(rm);
+                                }
+
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        private static void MarkWinnerInMatchs(List<Match> models)
+        {
+            string greaterWins = ConfigurationManager.AppSettings["greaterWins"];
+
+            foreach (Match m in models)
+            {
+
+                if(m.Entries.Count == 1)
+                {
+
+                    m.Winner = m.Entries[0].EquipeJouant;
+                    continue;
+                }
+
+                if (greaterWins == "0")
+                {
+                    if (m.Entries[0].Score < m.Entries[1].Score)
+                    {
+
+                        m.Winner = m.Entries[0].EquipeJouant;
+                    }
+                    else if(m.Entries[1].Score < m.Entries[0].Score)
+                    {
+                        m.Winner = m.Entries[1].EquipeJouant;
+
+                    }
+                    else
+                    {
+
+                        throw new Exception("Pas de matchs nuls. ");
+                    }
+                }
+                else
+                {
+
+
+
+                    if (m.Entries[0].Score > m.Entries[1].Score)
+                    {
+
+                        m.Winner = m.Entries[0].EquipeJouant;
+                    }
+                    else if (m.Entries[1].Score > m.Entries[0].Score)
+                    {
+                        m.Winner = m.Entries[1].EquipeJouant;
+
+                    }
+                    else
+                    {
+
+                        throw new Exception("Pas de matchs nuls. ");
+                    }
+
+
+
+
+
+
+
+                }
+            }
+            //if (equipe1Score > equipe2Score)
+            //{
+
+            //    m.Winner = m.Entries[0].EquipeJouant;
+
+            //}
+            //else if (equipe2Score > equipe1Score)
+            //{
+
+            //    m.Winner = m.Entries[1].EquipeJouant;
+            //}
+            //else
+            //{
+
+            //    MessageBox.Show("Il faut un gagnant, pas de match nul possible");
+            //}
 
         }
 

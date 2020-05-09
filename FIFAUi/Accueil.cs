@@ -60,6 +60,7 @@ namespace FIFAUi
             if(player.URL == "")   
           {
                 player.URL = "johnny.MP3";
+                
                 player.controls.play();
             }
 

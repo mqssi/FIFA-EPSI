@@ -98,13 +98,17 @@ namespace FIFAUi
             competition.DateCompetition = DateTime.Now;
 
             //créer matchups
-            TournoiViewer frm = new TournoiViewer(competition);
-            frm.Show();
+            //TournoiViewer frm = new TournoiViewer(competition);
+            //frm.Show();
             CompLogic.CreerRounds(competition);
 
 
             GlobalConfig.Connection.CreerCompet(competition);
 
+            
+            TournoiViewer frm2 = new TournoiViewer(competition);
+            frm2.Show();
+            this.Close();
 
 
         }
