@@ -187,7 +187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(752, 685);
+            this.ClientSize = new System.Drawing.Size(705, 685);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.pdfButton);
             this.Controls.Add(this.runnerUpLabel);

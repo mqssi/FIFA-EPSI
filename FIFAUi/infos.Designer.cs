@@ -55,9 +55,9 @@
             this.infosLabel.AutoSize = true;
             this.infosLabel.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infosLabel.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.infosLabel.Location = new System.Drawing.Point(103, 192);
+            this.infosLabel.Location = new System.Drawing.Point(101, 158);
             this.infosLabel.Name = "infosLabel";
-            this.infosLabel.Size = new System.Drawing.Size(954, 300);
+            this.infosLabel.Size = new System.Drawing.Size(934, 400);
             this.infosLabel.TabIndex = 7;
             this.infosLabel.Text = resources.GetString("infosLabel.Text");
             // 
@@ -79,7 +79,7 @@
             this.nePAScliquerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nePAScliquerBtn.ForeColor = System.Drawing.Color.Red;
             this.nePAScliquerBtn.Image = global::FIFAUi.Properties.Resources.nukkke;
-            this.nePAScliquerBtn.Location = new System.Drawing.Point(1002, 362);
+            this.nePAScliquerBtn.Location = new System.Drawing.Point(1000, 476);
             this.nePAScliquerBtn.Name = "nePAScliquerBtn";
             this.nePAScliquerBtn.Size = new System.Drawing.Size(74, 67);
             this.nePAScliquerBtn.TabIndex = 9;
@@ -102,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1125, 450);
+            this.ClientSize = new System.Drawing.Size(1125, 599);
             this.Controls.Add(this.nePAScliquerBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.infosLabel);

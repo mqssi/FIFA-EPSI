@@ -118,14 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="infosLabel.Text" xml:space="preserve">
-    <value>L'appli a pour but de simuler une compétition de jeux vidéo.
+    <value>L'application a pour but de simuler une compétition de jeux vidéo.
 
-Un utilisateur peut créer des équipes (une équipe peut être composé  que d'un seul joueur) 
-et peut ainsi simuler des match en rentrant manuellement les scores des équipes.
+Un utilisateur peut créer des équipes et y ajouter des coéquipiés et peut ainsi simuler des 
+matchs en rentrant manuellement les scores des équipes.
+Chaque match est décidé de facon aléatoire. Il est possible d'inscrire 
+un nombre impaire d'équipe.
+
 
 L'application est sujet à des mises à jour dans les mois à venir.
 
-Pour tout bug, contactez massi.bouharati@epsi.fr
+S'il y a un bogue contactez ahmed.rachid@epsi.fr - Service Deboguage
+
 
 
 

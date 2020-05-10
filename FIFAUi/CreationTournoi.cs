@@ -92,6 +92,19 @@ namespace FIFAUi
         private void creationTournoiButton_Click(object sender, EventArgs e)
         {
 
+            if(nomTournoiValue == null || nomTournoiValue.Text.Length < 3)
+            {
+
+                MessageBox.Show("Il faut renseigner un nom de tournoi (au moins 3 caractères)");
+                return;
+
+            }
+            else if (equipesTournoiListBox == null || equipesTournoiListBox.Items.Count < 2)
+            {
+
+                MessageBox.Show("Il faut ajouter au moins 2 équipes");
+                return;
+            }
             Competition competition = new Competition();
             competition.EquipeInscrites = EquipesSelected;
             competition.Comp_Nom = nomTournoiValue.Text;
