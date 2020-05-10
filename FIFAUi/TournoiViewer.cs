@@ -1,6 +1,5 @@
 ﻿using FIFALib;
 using FIFALib.Models;
-using PdfSharp.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
