@@ -49,17 +49,18 @@
             // 
             this.TournoiLabel.AutoSize = true;
             this.TournoiLabel.Font = new System.Drawing.Font("Montserrat Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TournoiLabel.Location = new System.Drawing.Point(25, 31);
+            this.TournoiLabel.Location = new System.Drawing.Point(420, 20);
             this.TournoiLabel.Name = "TournoiLabel";
-            this.TournoiLabel.Size = new System.Drawing.Size(151, 38);
+            this.TournoiLabel.Size = new System.Drawing.Size(221, 38);
             this.TournoiLabel.TabIndex = 3;
-            this.TournoiLabel.Text = "Tournoi :";
+            this.TournoiLabel.Text = "Competition:";
             // 
             // nomCompetitionLabel
             // 
             this.nomCompetitionLabel.AutoSize = true;
             this.nomCompetitionLabel.Font = new System.Drawing.Font("Montserrat Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomCompetitionLabel.Location = new System.Drawing.Point(182, 31);
+            this.nomCompetitionLabel.ForeColor = System.Drawing.Color.Aqua;
+            this.nomCompetitionLabel.Location = new System.Drawing.Point(647, 20);
             this.nomCompetitionLabel.Name = "nomCompetitionLabel";
             this.nomCompetitionLabel.Size = new System.Drawing.Size(49, 38);
             this.nomCompetitionLabel.TabIndex = 4;
@@ -68,9 +69,9 @@
             // roundDropdown
             // 
             this.roundDropdown.FormattingEnabled = true;
-            this.roundDropdown.Location = new System.Drawing.Point(104, 121);
+            this.roundDropdown.Location = new System.Drawing.Point(512, 375);
             this.roundDropdown.Name = "roundDropdown";
-            this.roundDropdown.Size = new System.Drawing.Size(127, 27);
+            this.roundDropdown.Size = new System.Drawing.Size(54, 27);
             this.roundDropdown.TabIndex = 9;
             this.roundDropdown.SelectedIndexChanged += new System.EventHandler(this.roundDropdown_SelectedIndexChanged);
             // 
@@ -78,7 +79,7 @@
             // 
             this.roundLabel.AutoSize = true;
             this.roundLabel.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel.Location = new System.Drawing.Point(12, 123);
+            this.roundLabel.Location = new System.Drawing.Point(380, 377);
             this.roundLabel.Name = "roundLabel";
             this.roundLabel.Size = new System.Drawing.Size(86, 25);
             this.roundLabel.TabIndex = 8;
@@ -88,9 +89,9 @@
             // 
             this.matchUpListBox.FormattingEnabled = true;
             this.matchUpListBox.ItemHeight = 19;
-            this.matchUpListBox.Location = new System.Drawing.Point(42, 173);
+            this.matchUpListBox.Location = new System.Drawing.Point(287, 420);
             this.matchUpListBox.Name = "matchUpListBox";
-            this.matchUpListBox.Size = new System.Drawing.Size(203, 213);
+            this.matchUpListBox.Size = new System.Drawing.Size(505, 118);
             this.matchUpListBox.TabIndex = 14;
             this.matchUpListBox.SelectedIndexChanged += new System.EventHandler(this.matchUpListBox_SelectedIndexChanged);
             // 
@@ -98,7 +99,8 @@
             // 
             this.equipe1Label.AutoSize = true;
             this.equipe1Label.Font = new System.Drawing.Font("Montserrat Light", 18F);
-            this.equipe1Label.Location = new System.Drawing.Point(374, 154);
+            this.equipe1Label.ForeColor = System.Drawing.Color.Chartreuse;
+            this.equipe1Label.Location = new System.Drawing.Point(242, 131);
             this.equipe1Label.Name = "equipe1Label";
             this.equipe1Label.Size = new System.Drawing.Size(128, 29);
             this.equipe1Label.TabIndex = 15;
@@ -108,7 +110,7 @@
             // 
             this.scoreEquipe1Label.AutoSize = true;
             this.scoreEquipe1Label.Font = new System.Drawing.Font("Montserrat Light", 16F);
-            this.scoreEquipe1Label.Location = new System.Drawing.Point(333, 202);
+            this.scoreEquipe1Label.Location = new System.Drawing.Point(192, 195);
             this.scoreEquipe1Label.Name = "scoreEquipe1Label";
             this.scoreEquipe1Label.Size = new System.Drawing.Size(75, 26);
             this.scoreEquipe1Label.TabIndex = 16;
@@ -116,14 +118,14 @@
             // 
             // scoreEquipe1Value
             // 
-            this.scoreEquipe1Value.Location = new System.Drawing.Point(410, 204);
+            this.scoreEquipe1Value.Location = new System.Drawing.Point(269, 197);
             this.scoreEquipe1Value.Name = "scoreEquipe1Value";
             this.scoreEquipe1Value.Size = new System.Drawing.Size(101, 27);
             this.scoreEquipe1Value.TabIndex = 17;
             // 
             // scoreEquipe2Value
             // 
-            this.scoreEquipe2Value.Location = new System.Drawing.Point(410, 332);
+            this.scoreEquipe2Value.Location = new System.Drawing.Point(793, 197);
             this.scoreEquipe2Value.Name = "scoreEquipe2Value";
             this.scoreEquipe2Value.Size = new System.Drawing.Size(101, 27);
             this.scoreEquipe2Value.TabIndex = 20;
@@ -132,7 +134,7 @@
             // 
             this.scoreEquipe2Label.AutoSize = true;
             this.scoreEquipe2Label.Font = new System.Drawing.Font("Montserrat Light", 16F);
-            this.scoreEquipe2Label.Location = new System.Drawing.Point(333, 330);
+            this.scoreEquipe2Label.Location = new System.Drawing.Point(716, 195);
             this.scoreEquipe2Label.Name = "scoreEquipe2Label";
             this.scoreEquipe2Label.Size = new System.Drawing.Size(75, 26);
             this.scoreEquipe2Label.TabIndex = 19;
@@ -142,7 +144,8 @@
             // 
             this.equipe2Label.AutoSize = true;
             this.equipe2Label.Font = new System.Drawing.Font("Montserrat Light", 18F);
-            this.equipe2Label.Location = new System.Drawing.Point(374, 282);
+            this.equipe2Label.ForeColor = System.Drawing.Color.Chartreuse;
+            this.equipe2Label.Location = new System.Drawing.Point(771, 131);
             this.equipe2Label.Name = "equipe2Label";
             this.equipe2Label.Size = new System.Drawing.Size(133, 29);
             this.equipe2Label.TabIndex = 18;
@@ -151,11 +154,11 @@
             // vsLabel
             // 
             this.vsLabel.AutoSize = true;
-            this.vsLabel.Font = new System.Drawing.Font("Montserrat Light", 16F);
+            this.vsLabel.Font = new System.Drawing.Font("Montserrat Light", 50F);
             this.vsLabel.ForeColor = System.Drawing.Color.Red;
-            this.vsLabel.Location = new System.Drawing.Point(405, 246);
+            this.vsLabel.Location = new System.Drawing.Point(498, 141);
             this.vsLabel.Name = "vsLabel";
-            this.vsLabel.Size = new System.Drawing.Size(33, 26);
+            this.vsLabel.Size = new System.Drawing.Size(97, 80);
             this.vsLabel.TabIndex = 21;
             this.vsLabel.Text = "vs";
             // 
@@ -166,18 +169,18 @@
             this.scoreRoundButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.scoreRoundButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.scoreRoundButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scoreRoundButton.Location = new System.Drawing.Point(596, 246);
+            this.scoreRoundButton.Location = new System.Drawing.Point(482, 251);
             this.scoreRoundButton.Name = "scoreRoundButton";
             this.scoreRoundButton.Size = new System.Drawing.Size(129, 58);
             this.scoreRoundButton.TabIndex = 22;
-            this.scoreRoundButton.Text = "Score";
+            this.scoreRoundButton.Text = "Entrer Score";
             this.scoreRoundButton.UseVisualStyleBackColor = true;
             this.scoreRoundButton.Click += new System.EventHandler(this.scoreRoundButton_Click);
             // 
             // unplayedButton
             // 
             this.unplayedButton.AutoSize = true;
-            this.unplayedButton.Location = new System.Drawing.Point(104, 88);
+            this.unplayedButton.Location = new System.Drawing.Point(601, 377);
             this.unplayedButton.Name = "unplayedButton";
             this.unplayedButton.Size = new System.Drawing.Size(169, 23);
             this.unplayedButton.TabIndex = 23;
@@ -189,8 +192,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(795, 434);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1119, 606);
             this.Controls.Add(this.unplayedButton);
             this.Controls.Add(this.scoreRoundButton);
             this.Controls.Add(this.vsLabel);
@@ -206,7 +209,7 @@
             this.Controls.Add(this.nomCompetitionLabel);
             this.Controls.Add(this.TournoiLabel);
             this.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ForeColor = System.Drawing.Color.Azure;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "TournoiViewer";

@@ -38,12 +38,12 @@
             // 
             this.creationTournoiLabel.AutoSize = true;
             this.creationTournoiLabel.Font = new System.Drawing.Font("Montserrat Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.creationTournoiLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.creationTournoiLabel.Location = new System.Drawing.Point(224, 73);
+            this.creationTournoiLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.creationTournoiLabel.Location = new System.Drawing.Point(200, 80);
             this.creationTournoiLabel.Name = "creationTournoiLabel";
-            this.creationTournoiLabel.Size = new System.Drawing.Size(330, 38);
+            this.creationTournoiLabel.Size = new System.Drawing.Size(377, 38);
             this.creationTournoiLabel.TabIndex = 3;
-            this.creationTournoiLabel.Text = "Compétitions Crées:";
+            this.creationTournoiLabel.Text = "Compétitions en cours:";
             // 
             // LoadCompsDropDown
             // 
@@ -57,7 +57,7 @@
             // LoadCompButton
             // 
             this.LoadCompButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadCompButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LoadCompButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.LoadCompButton.Location = new System.Drawing.Point(252, 216);
             this.LoadCompButton.Name = "LoadCompButton";
             this.LoadCompButton.Size = new System.Drawing.Size(267, 67);
@@ -70,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.LoadCompButton);
             this.Controls.Add(this.LoadCompsDropDown);

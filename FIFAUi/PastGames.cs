@@ -36,8 +36,19 @@ namespace FIFAUi
         private void LoadCompButton_Click(object sender, EventArgs e)
         {
             Competition comp = (Competition)LoadCompsDropDown.SelectedItem;
-            TournoiViewer frm = new TournoiViewer(comp);
-            frm.Show();
+
+            if(LoadCompsDropDown.SelectedItem == null)
+            {
+                MessageBox.Show("Il faut sélectionner une compétition");
+                return;
+            }
+            else
+            {
+                TournoiViewer frm = new TournoiViewer(comp);
+                frm.Show();
+
+            }
+          
         }
     }
 }

@@ -14,6 +14,8 @@ namespace FIFALib.Models
     {
 
 
+        public event EventHandler<DateTime> CompetitionComplete;
+
         public int ID_Competition{ get; set; }
         /// <summary>
         /// Représente le nom d'une compétition
@@ -48,6 +50,13 @@ namespace FIFALib.Models
         public List<Equipe> EquipeInscrites { get; set; } = new List<Equipe>();
 
         public List<List<Match>> Rounds { get; set; } = new List<List<Match>>();
+
+        public void CompleteComp()
+        {
+
+            CompetitionComplete?.Invoke(this, DateTime.Now);
+
+        }
 
     }
 }

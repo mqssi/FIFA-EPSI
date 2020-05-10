@@ -58,6 +58,7 @@
             // 
             this.creationLabel.AutoSize = true;
             this.creationLabel.Font = new System.Drawing.Font("Montserrat Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creationLabel.ForeColor = System.Drawing.Color.Azure;
             this.creationLabel.Location = new System.Drawing.Point(431, 41);
             this.creationLabel.Name = "creationLabel";
             this.creationLabel.Size = new System.Drawing.Size(273, 38);
@@ -68,6 +69,7 @@
             // 
             this.nomEquipeLabel.AutoSize = true;
             this.nomEquipeLabel.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomEquipeLabel.ForeColor = System.Drawing.Color.Azure;
             this.nomEquipeLabel.Location = new System.Drawing.Point(42, 213);
             this.nomEquipeLabel.Name = "nomEquipeLabel";
             this.nomEquipeLabel.Size = new System.Drawing.Size(182, 25);
@@ -85,6 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Azure;
             this.label1.Location = new System.Drawing.Point(13, 289);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(214, 25);
@@ -130,11 +133,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(42, 255);
+            this.label5.ForeColor = System.Drawing.Color.Azure;
+            this.label5.Location = new System.Drawing.Point(6, 255);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 23);
+            this.label5.Size = new System.Drawing.Size(156, 23);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Equipe:";
+            this.label5.Text = "Equipe Favorite";
             // 
             // creationJoueurButton
             // 
@@ -143,6 +147,7 @@
             this.creationJoueurButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.creationJoueurButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.creationJoueurButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.creationJoueurButton.ForeColor = System.Drawing.Color.Azure;
             this.creationJoueurButton.Location = new System.Drawing.Point(110, 296);
             this.creationJoueurButton.Name = "creationJoueurButton";
             this.creationJoueurButton.Size = new System.Drawing.Size(169, 42);
@@ -162,6 +167,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.label4.Location = new System.Drawing.Point(42, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 23);
@@ -179,6 +185,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.label3.Location = new System.Drawing.Point(42, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 23);
@@ -196,6 +203,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.label2.Location = new System.Drawing.Point(42, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 23);
@@ -213,6 +221,7 @@
             // 
             this.pseudoJoueurLabel.AutoSize = true;
             this.pseudoJoueurLabel.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pseudoJoueurLabel.ForeColor = System.Drawing.Color.Azure;
             this.pseudoJoueurLabel.Location = new System.Drawing.Point(42, 46);
             this.pseudoJoueurLabel.Name = "pseudoJoueurLabel";
             this.pseudoJoueurLabel.Size = new System.Drawing.Size(84, 23);
@@ -226,6 +235,7 @@
             this.creationEquipeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.creationEquipeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.creationEquipeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.creationEquipeButton.ForeColor = System.Drawing.Color.Azure;
             this.creationEquipeButton.Location = new System.Drawing.Point(504, 877);
             this.creationEquipeButton.Name = "creationEquipeButton";
             this.creationEquipeButton.Size = new System.Drawing.Size(247, 78);
@@ -266,6 +276,7 @@
             this.ajouterJoueurEquipeiButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.ajouterJoueurEquipeiButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.ajouterJoueurEquipeiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ajouterJoueurEquipeiButton.ForeColor = System.Drawing.Color.Azure;
             this.ajouterJoueurEquipeiButton.Location = new System.Drawing.Point(157, 340);
             this.ajouterJoueurEquipeiButton.Name = "ajouterJoueurEquipeiButton";
             this.ajouterJoueurEquipeiButton.Size = new System.Drawing.Size(212, 51);
@@ -278,6 +289,7 @@
             // 
             this.joueursEquipeLabel.AutoSize = true;
             this.joueursEquipeLabel.Font = new System.Drawing.Font("Montserrat Light", 16F);
+            this.joueursEquipeLabel.ForeColor = System.Drawing.Color.Azure;
             this.joueursEquipeLabel.Location = new System.Drawing.Point(673, 160);
             this.joueursEquipeLabel.Name = "joueursEquipeLabel";
             this.joueursEquipeLabel.Size = new System.Drawing.Size(222, 26);
@@ -288,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1200, 995);
             this.Controls.Add(this.joueursEquipeLabel);
             this.Controls.Add(this.ajouterJoueurEquipeiButton);

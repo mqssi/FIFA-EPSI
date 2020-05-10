@@ -42,6 +42,7 @@
             this.creationTournoiLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.creationTournoiLabel.AutoSize = true;
             this.creationTournoiLabel.Font = new System.Drawing.Font("Montserrat Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creationTournoiLabel.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.creationTournoiLabel.Location = new System.Drawing.Point(443, 95);
             this.creationTournoiLabel.Name = "creationTournoiLabel";
             this.creationTournoiLabel.Size = new System.Drawing.Size(263, 38);
@@ -53,15 +54,17 @@
             this.infosLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.infosLabel.AutoSize = true;
             this.infosLabel.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infosLabel.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.infosLabel.Location = new System.Drawing.Point(103, 192);
             this.infosLabel.Name = "infosLabel";
-            this.infosLabel.Size = new System.Drawing.Size(954, 175);
+            this.infosLabel.Size = new System.Drawing.Size(954, 300);
             this.infosLabel.TabIndex = 7;
             this.infosLabel.Text = resources.GetString("infosLabel.Text");
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 62);
@@ -81,6 +84,7 @@
             this.nePAScliquerBtn.Size = new System.Drawing.Size(74, 67);
             this.nePAScliquerBtn.TabIndex = 9;
             this.nePAScliquerBtn.UseVisualStyleBackColor = true;
+            this.nePAScliquerBtn.Visible = false;
             // 
             // pictureBox1
             // 
@@ -97,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1125, 450);
             this.Controls.Add(this.nePAScliquerBtn);
             this.Controls.Add(this.button1);

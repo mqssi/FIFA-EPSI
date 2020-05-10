@@ -16,6 +16,8 @@ namespace FIFALib.DataAcess
         void UpdateMatch(Match model);
         void CreerCompet(Competition comp);
 
+        void CompleteComp(Competition comp);
+
         List<Joueur> GetALLJoueur();
 
         List<Equipe> GetTeam_ALL();

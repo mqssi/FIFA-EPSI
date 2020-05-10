@@ -28,11 +28,24 @@ namespace FIFAUi
             InitializeComponent();
 
             competition = competitionModel;
+
+            competition.CompetitionComplete += Competition_CompetitionComplete;
         
             LienListe();
 
             LoadFormData();
             LoadRounds();
+        }
+
+        private void Competition_CompetitionComplete(object sender, DateTime e)
+        {
+
+
+            Recap frmRecap = new Recap(this.competition);
+            frmRecap.Show();
+
+            this.Close();
+
         }
 
         private void LoadFormData()
@@ -218,8 +231,58 @@ namespace FIFAUi
             LoadMatchs((int)roundDropdown.SelectedItem);
         }
 
+        private string ValidateData()
+        {
+
+            string output = "";
+
+            double equipe1Score = 0;
+            double equipe2Score = 0;
+
+            bool scoreOneValid = double.TryParse(scoreEquipe1Value.Text, out equipe1Score);
+            bool scoreTwoValid = double.TryParse(scoreEquipe2Value.Text, out equipe2Score);
+
+            if(!scoreOneValid )
+            {
+
+                output = "Le score de la première équipe est invalide";
+            }
+
+           else if (!scoreTwoValid)
+            {
+
+                output = "Le score de la deuxième équipe est invalide";
+            }
+
+            else if (equipe1Score == 0 && equipe2Score ==0)
+            {
+
+                output = "Les match nuls sont impossibles, il faut désigner un vainqueur";
+            
+            }
+
+            else if (equipe1Score == equipe2Score)
+            {
+
+                output = "Les match nuls sont impossibles, il faut désigner un vainqueur";
+            }
+
+            return output;
+        }
+
+
         private void scoreRoundButton_Click(object sender, EventArgs e)
         {
+
+            string errorMessage = ValidateData();
+
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show($"Erreur de saisie : { errorMessage  } ");
+                return;
+            }
+
+
             Match m = (Match)matchUpListBox.SelectedItem;
             double equipe1Score = 0;
             double equipe2Score = 0;
@@ -237,6 +300,7 @@ namespace FIFAUi
                         if (scoreValid) 
                         {
                             m.Entries[0].Score = equipe1Score;
+
                         }
                         else
                         {
@@ -283,6 +347,8 @@ namespace FIFAUi
                 }
 
 
+
+
             }
 
             //if(equipe1Score > equipe2Score)
@@ -326,7 +392,23 @@ namespace FIFAUi
             //    }
 
             //}
+
+
+            try 
+            { 
             CompLogic.UpdateCompResults(competition);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur detectée : {ex.Message} ");
+                return;
+
+            }
+
+
+            MessageBox.Show( $"Match terminé: le gagnant est l'équipe { m.Winner.Nom_Equipe } ");
+
+            //MessageBox.Show( $"Match terminé: le gagnant est l'équipe { m.Winner.Nom_Equipe } composée de { m.Winner.MembreEquipe }");
             LoadMatchs((int)roundDropdown.SelectedItem);
 
             //GlobalConfig.Connection.UpdateMatch(m);

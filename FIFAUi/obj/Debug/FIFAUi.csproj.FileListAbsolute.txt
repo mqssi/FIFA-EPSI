@@ -27,3 +27,4 @@ C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\de\PdfSharp.resources.dll
 C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\bin\Debug\de\PdfSharp.Charting.resources.dll
 C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\Interop.WMPLib.dll
 C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.csproj.ResolveComReference.cache
+C:\Users\Massi\Desktop\work\FIFA\FIFA\FIFAUi\obj\Debug\FIFAUi.Recap.resources

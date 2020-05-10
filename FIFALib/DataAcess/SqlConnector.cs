@@ -398,5 +398,19 @@ namespace FIFALib.DataAcess
 
             }
         }
+
+        public void CompleteComp(Competition comp)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+
+                var c = new DynamicParameters();
+                c.Add("@ID_Competition", comp.ID_Competition);
+
+                connection.Execute("dbo.spComplete_Comp", c, commandType: CommandType.StoredProcedure);
+
+
+            }
+        }
     }
 }
